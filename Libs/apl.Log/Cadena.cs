@@ -1,20 +1,8 @@
-#region Copyright (c) 2000-2017 cjlc
-/*
-{+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++)
-{                                                                   }
-{     cjlc Cap control administrativo personal                      }
-{                                                                   }
-{     Copyrigth (c) 2000-2017 cjlc                                  }
-{     Todos los derechos reservados                                 }
-{                                                                   }
-{*******************************************************************}
- */
 /*
  * 
  * Cadena       Para convertir una cadena de números en su equivalente en letra.
  *              Falta hacerlo para otras lenguas... inglés... (JAAP)
  */
-#endregion
 
 using System;
 
