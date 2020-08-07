@@ -1,8 +1,7 @@
 ﻿/*
  * javier1604@gmail.com
- * Carlos Javier Lopez Cruz
+ * CJLC
  *
- * User: Tlacaelel Icpac
  * Date: 21/ Mar /2016
  * Time: 09:59 a. m.
  * 
