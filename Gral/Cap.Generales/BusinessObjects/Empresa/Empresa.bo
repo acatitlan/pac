@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="Cap.Generales.BusinessObjects.Empresa.Empresa" IsDesigned="True" />
+  </BOModel>
+  <Views>
+    <DetailView Id="Empresa_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <TabbedGroup Id="Item3" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Empresa" ShowCaption="True" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="Empresa_col1" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                  <LayoutGroup Id="Auto8647ca88-0b87-4753-877c-212aa7667add" ShowCaption="False" Direction="Vertical" Index="0" RelativeSize="100" IsNewNode="True">
+                    <LayoutGroup Id="Auto09b2b6b4-1e6a-468a-8c10-47e5d3f27297" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                      <LayoutItem Id="Compania.Nombre" ViewItem="Compania.Nombre" Index="0" RelativeSize="4.87062404870624" IsNewNode="True" />
+                      <LayoutItem Id="Slogan" ViewItem="Slogan" Index="1" RelativeSize="3.65296803652968" IsNewNode="True" />
+                      <LayoutItem Id="Compania.Rfc" ViewItem="Compania.Rfc" Index="2" RelativeSize="3.65296803652968" IsNewNode="True" />
+                      <LayoutItem Id="NumRegPatSS" ViewItem="NumRegPatSS" Index="3" RelativeSize="3.65296803652968" IsNewNode="True" />
+                      <LayoutItem Id="Compania.Curp" ViewItem="Compania.Curp" Index="4" RelativeSize="3.65296803652968" IsNewNode="True" />
+                      <LayoutItem Id="Compania.Direccion" ViewItem="Compania.Direccion" Index="5" RelativeSize="3.65296803652968" IsNewNode="True" />
+                      <LayoutGroup Id="Auto00f0e070-0f25-4909-988a-f76d35cf8dd4" ShowCaption="False" Caption="Auto00f0e070-0f25-4909-988a-f76d35cf8dd4(14)" Direction="Horizontal" Index="6" RelativeSize="35.007610350076106" IsNewNode="True">
+                        <LayoutGroup Id="Regimenes_Group" ShowCaption="True" Caption="Regimenes" Index="0" RelativeSize="49.75845410628019" IsNewNode="True">
+                          <LayoutItem Id="Regimenes" ViewItem="Regimenes" Index="0" RelativeSize="100" IsNewNode="True" />
+                        </LayoutGroup>
+                        <LayoutItem Id="Logo" ViewItem="Logo" CaptionLocation="Top" SizeConstraintsType="Custom" MinSize="96, 50" Index="1" RelativeSize="50.24154589371981" IsNewNode="True" />
+                      </LayoutGroup>
+                      <LayoutItem Id="Item1" SizeConstraintsType="Custom" MinSize="196, 32" Index="7" RelativeSize="41.856925418569254" ViewItem="Item1" IsNewNode="True" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" Caption="PAC" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="ConCfdi" ViewItem="ConCfdi" Index="0" RelativeSize="4.87062404870624" IsNewNode="True" />
+                <LayoutItem Id="Usuario" ViewItem="Usuario" Index="1" RelativeSize="3.65296803652968" IsNewNode="True" />
+                <LayoutItem Id="Passw" ViewItem="Passw" Index="2" RelativeSize="3.65296803652968" IsNewNode="True" />
+                <LayoutItem Id="Contra" ViewItem="Contra" Index="3" RelativeSize="3.65296803652968" IsNewNode="True" />
+                <LayoutItem Id="PortalCfdi" ViewItem="PortalCfdi" Index="4" RelativeSize="3.65296803652968" IsNewNode="True" />
+                <LayoutItem Id="Terceros" ViewItem="Terceros" Index="5" RelativeSize="3.65296803652968" IsNewNode="True" />
+                <LayoutItem Id="ServiciosUnidades" ViewItem="ServiciosUnidades" Index="6" RelativeSize="76.864535768645354" IsNewNode="True" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="Empresa" RelativeSize="88.032220943613353" Direction="Vertical" Removed="True">
+              <LayoutGroup Id="Empresa_col1" RelativeSize="100">
+                <LayoutGroup Id="Auto8647ca88-0b87-4753-877c-212aa7667add" ShowCaption="False" Direction="Horizontal" Index="0" RelativeSize="41.4500683994528" IsNewNode="True">
+                  <LayoutGroup Id="Auto09b2b6b4-1e6a-468a-8c10-47e5d3f27297" ShowCaption="False" Index="0" RelativeSize="50.68681318681319" IsNewNode="True">
+                    <LayoutItem Id="Compania.Nombre" ViewItem="Compania.Nombre" Index="0" RelativeSize="10.561056105610561" IsNewNode="True" />
+                    <LayoutItem Id="Slogan" ViewItem="Slogan" Index="1" RelativeSize="7.9207920792079207" IsNewNode="True" />
+                    <LayoutItem Id="Compania.Rfc" ViewItem="Compania.Rfc" Index="2" RelativeSize="7.9207920792079207" IsNewNode="True" />
+                    <LayoutItem Id="NumRegPatSS" ViewItem="NumRegPatSS" Index="3" RelativeSize="7.9207920792079207" IsNewNode="True" />
+                    <LayoutItem Id="Rgmn" ViewItem="Rgmn" Index="4" RelativeSize="7.9207920792079207" IsNewNode="True" />
+                    <LayoutItem Id="Compania.Curp" ViewItem="Compania.Curp" Index="5" RelativeSize="7.9207920792079207" IsNewNode="True" />
+                    <LayoutItem Id="Usuario" ViewItem="Usuario" Index="6" RelativeSize="7.9207920792079207" IsNewNode="True" />
+                    <LayoutItem Id="Passw" ViewItem="Passw" Index="7" RelativeSize="7.9207920792079207" IsNewNode="True" />
+                    <LayoutGroup Id="Autoa35bcf29-0014-4aca-b0ba-5b7a220cb1de" ShowCaption="False" Direction="Horizontal" Index="8" RelativeSize="0.33003300330033003" IsNewNode="True" />
+                    <LayoutItem Id="Contra" ViewItem="Contra" Index="9" RelativeSize="7.9207920792079207" IsNewNode="True" />
+                    <LayoutItem Id="ConCfdi" ViewItem="ConCfdi" Index="10" RelativeSize="7.9207920792079207" IsNewNode="True" />
+                    <LayoutItem Id="ConRet" ViewItem="ConRet" Index="11" RelativeSize="7.9207920792079207" IsNewNode="True" />
+                    <LayoutItem Id="Trans" ViewItem="Trans" Index="12" RelativeSize="9.9009900990099009" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutItem Id="Logo" ViewItem="Logo" Index="1" RelativeSize="49.31318681318681" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Compania.Nombre" Index="0" RelativeSize="4.2723631508678235" ViewItem="Compania.Nombre" Removed="True" />
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="38.57729138166895" IsNewNode="True">
+                  <LayoutItem Id="Compania.Direccion.CP" ViewItem="Compania.Direccion.CP" Index="0" RelativeSize="12.5" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.Calle" ViewItem="Compania.Direccion.Calle" Index="1" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.Numero" ViewItem="Compania.Direccion.Numero" Index="2" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.Interior" ViewItem="Compania.Direccion.Interior" Index="3" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.Colonia" ViewItem="Compania.Direccion.Colonia" Index="4" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.Municipio" ViewItem="Compania.Direccion.Municipio" Index="5" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.Ciudad" ViewItem="Compania.Direccion.Ciudad" Index="6" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.Estado" ViewItem="Compania.Direccion.Estado" Index="7" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.Pais" ViewItem="Compania.Direccion.Pais" Index="8" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.Referencia" ViewItem="Compania.Direccion.Referencia" Index="9" RelativeSize="12.5" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="2" RelativeSize="19.972640218878247" IsNewNode="True">
+                  <LayoutItem Id="Compania.Direccion.TelGnralLad" ViewItem="Compania.Direccion.TelGnralLad" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.TelefonoGeneral" ViewItem="Compania.Direccion.TelefonoGeneral" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.TelMovLad" ViewItem="Compania.Direccion.TelMovLad" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
+                  <LayoutItem Id="Compania.Direccion.TelefonoMovil" ViewItem="Compania.Direccion.TelefonoMovil" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Compania.Rfc" ViewItem="Compania.Rfc" Index="4" RelativeSize="3.2042723631508676" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.CP" RelativeSize="3.6090225563909772" Index="13" ViewItem="Compania.Direccion.CP" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.Calle" RelativeSize="3.3946251768033946" Index="14" ViewItem="Compania.Direccion.Calle" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.Ciudad" RelativeSize="3.3946251768033946" Index="14" ViewItem="Compania.Direccion.Ciudad" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.Colonia" RelativeSize="3.3946251768033946" Index="14" ViewItem="Compania.Direccion.Colonia" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.Estado" RelativeSize="3.3946251768033946" Index="14" ViewItem="Compania.Direccion.Estado" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.Interior" RelativeSize="3.3946251768033946" Index="14" ViewItem="Compania.Direccion.Interior" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.Municipio" RelativeSize="3.3946251768033946" Index="14" ViewItem="Compania.Direccion.Municipio" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.Numero" RelativeSize="3.3946251768033946" Index="14" ViewItem="Compania.Direccion.Numero" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.Pais" RelativeSize="3.3946251768033946" Index="14" ViewItem="Compania.Direccion.Pais" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.Referencia" RelativeSize="3.3946251768033946" Index="14" ViewItem="Compania.Direccion.Referencia" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.TelGnralLad" RelativeSize="3.3946251768033946" Index="14" ViewItem="Compania.Direccion.TelGnralLad" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.TelefonoGeneral" RelativeSize="3.2042723631508676" Index="15" ViewItem="Compania.Direccion.TelefonoGeneral" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.TelMovLad" RelativeSize="3.2042723631508676" Index="15" ViewItem="Compania.Direccion.TelMovLad" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Empresa_col2" RelativeSize="46.771378708551481" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="Compania.Direccion.Email" RelativeSize="4.2723631508678235" ViewItem="Compania.Direccion.Email" Index="0" Removed="True" />
+                <LayoutItem Id="Logo" RelativeSize="100" Index="0" ViewItem="Logo" Removed="True" />
+                <LayoutItem Id="Contra" RelativeSize="4.1379310344827589" ViewItem="Contra" Index="1" Removed="True" />
+                <LayoutItem Id="Passw" RelativeSize="4.3165467625899279" ViewItem="Passw" Index="1" Removed="True" />
+                <LayoutItem Id="PortalCfdi" RelativeSize="3.2042723631508676" Index="1" ViewItem="PortalCfdi" Removed="True" />
+                <LayoutItem Id="Terceros" RelativeSize="95.727636849132182" Index="1" ViewItem="Terceros" Removed="True" />
+                <LayoutItem Id="ConCfdi" RelativeSize="3.8897893030794166" Index="3" ViewItem="ConCfdi" Removed="True" />
+                <LayoutItem Id="ConRet" RelativeSize="3.7441497659906395" Index="3" ViewItem="ConRet" Removed="True" />
+                <LayoutItem Id="Trans" RelativeSize="3.2042723631508676" Index="3" ViewItem="Trans" Removed="True" />
+                <LayoutItem Id="Rgmn" RelativeSize="4.3165467625899279" Index="4" ViewItem="Rgmn" Removed="True" />
+                <LayoutItem Id="Slogan" RelativeSize="4.3165467625899279" Index="8" ViewItem="Slogan" Removed="True" />
+                <LayoutItem Id="NumRegPatSS" RelativeSize="4.3165467625899279" Index="9" ViewItem="NumRegPatSS" Removed="True" />
+                <LayoutItem Id="Compania.Direccion.Url" RelativeSize="4.2723631508678235" ViewItem="Compania.Direccion.Url" Removed="True" />
+                <LayoutItem Id="Regimen" RelativeSize="4.3165467625899279" ViewItem="Regimen" Removed="True" />
+                <LayoutItem Id="Usuario" RelativeSize="4.3165467625899279" ViewItem="Usuario" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Regimenes_Group" Direction="Vertical" RelativeSize="20.5761316872428" Removed="True">
+            <LayoutItem Id="Regimenes" RelativeSize="100" ViewItem="Regimenes" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
