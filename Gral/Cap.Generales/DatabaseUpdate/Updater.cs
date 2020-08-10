@@ -77,6 +77,21 @@ namespace Cap.Generales.DatabaseUpdate
                         "alter table Regimen alter column Dscrpcn nvarchar(100)", false);
                 }
             }
+
+            if (CurrentDBVersion <= new Version("1.0.7527.21705")
+                && CurrentDBVersion > new Version("0.0.0.0"))
+            {
+                if (((DevExpress.ExpressApp.Xpo.XPObjectSpace)this.ObjectSpace).Connection.ConnectionString.Contains("postgres"))
+                {
+                    ExecuteNonQueryCommand(
+                        "alter table \"Direccion\" alter column \"Numero\" Type varchar(45)", true);
+                }
+                else
+                {
+                    ExecuteNonQueryCommand(
+                        "alter table Direccion alter column Numero nvarchar(45)", false);
+                }
+            }
         }
     
 
