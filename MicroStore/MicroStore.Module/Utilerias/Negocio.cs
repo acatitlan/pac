@@ -193,10 +193,6 @@ namespace MicroStore.Module.Utilerias
                     decimal cstPrm = mov.Prdct.CostoPromedio;
                     decimal prom;
 
-                    /*
-                    if (Math.Abs(cstPrm) < 0.00001m)
-                        cstPrm = mov.Prdct.CostoUltimo;*/
-
                     prom = Convert.ToDecimal(exist) * cstPrm
                         + Convert.ToDecimal(mov.Cntdd) * mov.Cst;
 
