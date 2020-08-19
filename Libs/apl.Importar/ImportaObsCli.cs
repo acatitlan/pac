@@ -1,11 +1,11 @@
-#region Copyright (c) 2000-2012 cjlc
+#region 
 /*
 {+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++)
 {                                                                   }
-{     cjlc Cap control administrativo personal                      }
+{     tlacaelel.icpac                                               }
+{     Cap control administrativo personal                           }
 {                                                                   }
-{     Copyrigth (c) 2000-2012 cjlc                                  }
-{     Todos los derechos reservados                                 }
+{     2000-2012                                                     }
 {                                                                   }
 {*******************************************************************}
  */
@@ -15,7 +15,6 @@ using System;
 
 namespace apl.Importar
 {
-
     #region + Importa Observaciones Clientes
     public class ImportaObsCli : ImportaObs
     {
