@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="Cap.Bancos.BusinessObjects.Bancaria" IsDesigned="True" />
+  </BOModel>
+  <Views>
+    <DetailView Id="Bancaria_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <TabbedGroup Id="Item7" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Bancaria" ShowCaption="True" Direction="Horizontal" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="Bancaria_col1" ShowCaption="False" Index="0" RelativeSize="63.106796116504853" IsNewNode="True">
+                  <LayoutGroup Id="Item4" ShowCaption="True" Caption="Cuenta" CaptionLocation="Top" Index="0" RelativeSize="44.832826747720368" IsNewNode="True">
+                    <LayoutItem Id="Clave" ViewItem="Clave" SizeConstraintsType="Default" Index="0" RelativeSize="12.213740458015268" IsNewNode="True" />
+                    <LayoutItem Id="Clabe" ViewItem="Clabe" SizeConstraintsType="Default" Index="1" RelativeSize="9.16030534351145" IsNewNode="True" />
+                    <LayoutItem Id="NmrClnt" ViewItem="NmrClnt" SizeConstraintsType="Default" Index="2" RelativeSize="9.16030534351145" IsNewNode="True" />
+                    <LayoutGroup Id="Auto91c67b54-c07d-474c-8ced-c2db214d7fd4" ShowCaption="False" Direction="Horizontal" Index="3" RelativeSize="9.16030534351145" IsNewNode="True">
+                      <LayoutItem Id="Tipo" ViewItem="Tipo" Index="0" RelativeSize="52.968036529680369" IsNewNode="True" />
+                      <LayoutItem Id="Status" ViewItem="Status" Index="1" RelativeSize="47.031963470319631" IsNewNode="True" />
+                    </LayoutGroup>
+                    <LayoutItem Id="Descripcion" ViewItem="Descripcion" SizeConstraintsType="Default" Index="4" RelativeSize="9.16030534351145" IsNewNode="True" />
+                    <LayoutItem Id="Banco" ViewItem="Banco" SizeConstraintsType="Default" Index="5" RelativeSize="9.16030534351145" IsNewNode="True" />
+                    <LayoutItem Id="Sucursal" ViewItem="Sucursal" SizeConstraintsType="Default" Index="6" RelativeSize="9.16030534351145" IsNewNode="True" />
+                    <LayoutItem Id="Moneda" ViewItem="Moneda" SizeConstraintsType="Default" Index="7" RelativeSize="9.16030534351145" IsNewNode="True" />
+                    <LayoutItem Id="Telefono" ViewItem="Telefono" SizeConstraintsType="Default" Index="8" RelativeSize="9.16030534351145" IsNewNode="True" />
+                    <LayoutGroup Id="Auto02d7379e-057c-4643-abf2-5ea2e167cd9d" ShowCaption="False" Direction="Horizontal" Index="9" RelativeSize="14.50381679389313" IsNewNode="True">
+                      <LayoutItem Id="DiaCorte" ViewItem="DiaCorte" Index="0" RelativeSize="52.968036529680369" IsNewNode="True" />
+                      <LayoutItem Id="DiaPago" ViewItem="DiaPago" Index="1" RelativeSize="47.031963470319631" IsNewNode="True" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item5" ShowCaption="True" Caption="Fechas" CaptionLocation="Top" Index="1" RelativeSize="17.173252279635257" IsNewNode="True">
+                    <LayoutItem Id="FechaUltimoMov" ViewItem="FechaUltimoMov" SizeConstraintsType="Default" Index="0" RelativeSize="36.363636363636367" IsNewNode="True" />
+                    <LayoutItem Id="FechaAlta" ViewItem="FechaAlta" SizeConstraintsType="Default" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
+                    <LayoutItem Id="FApertura" ViewItem="FApertura" SizeConstraintsType="Default" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item3" ShowCaption="True" Caption="Web" CaptionLocation="Top" Index="2" RelativeSize="37.993920972644375" IsNewNode="True">
+                    <LayoutItem Id="Url" ViewItem="Url" SizeConstraintsType="Default" Index="0" RelativeSize="14.746543778801843" IsNewNode="True" />
+                    <LayoutItem Id="WebUsuario" ViewItem="WebUsuario" SizeConstraintsType="Default" Index="1" RelativeSize="11.059907834101383" IsNewNode="True" />
+                    <LayoutItem Id="WebNip" ViewItem="WebNip" SizeConstraintsType="Default" Index="2" RelativeSize="11.059907834101383" IsNewNode="True" />
+                    <LayoutItem Id="WebClave" ViewItem="WebClave" SizeConstraintsType="Default" Index="3" RelativeSize="63.133640552995395" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Bancaria_col2" ShowCaption="False" Index="1" RelativeSize="36.893203883495147" IsNewNode="True">
+                  <LayoutGroup Id="Item2" ShowCaption="True" Caption="Saldos" CaptionLocation="Top" Index="0" RelativeSize="36.626139817629181" IsNewNode="True">
+                    <LayoutItem Id="SaldoInicial" ViewItem="SaldoInicial" SizeConstraintsType="Default" Index="0" RelativeSize="15.384615384615385" IsNewNode="True" />
+                    <LayoutItem Id="SaldoFinal" ViewItem="SaldoFinal" SizeConstraintsType="Default" Index="1" RelativeSize="11.538461538461538" IsNewNode="True" />
+                    <LayoutItem Id="SaldoPromedio" ViewItem="SaldoPromedio" SizeConstraintsType="Default" Index="2" RelativeSize="11.538461538461538" IsNewNode="True" />
+                    <LayoutItem Id="SaldoTransito" ViewItem="SaldoTransito" SizeConstraintsType="Default" Index="3" RelativeSize="11.538461538461538" IsNewNode="True" />
+                    <LayoutItem Id="SaldoLimite" ViewItem="SaldoLimite" SizeConstraintsType="Default" Index="4" RelativeSize="11.538461538461538" IsNewNode="True" />
+                    <LayoutItem Id="Saldominimo" ViewItem="Saldominimo" SizeConstraintsType="Default" Index="5" RelativeSize="11.538461538461538" IsNewNode="True" />
+                    <LayoutItem Id="VerificaSaldo" ViewItem="VerificaSaldo" SizeConstraintsType="Default" Index="6" RelativeSize="11.538461538461538" IsNewNode="True" />
+                    <LayoutItem Id="ComisionSm" ViewItem="ComisionSm" SizeConstraintsType="Default" Index="7" RelativeSize="15.384615384615385" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item6" ShowCaption="True" Caption="Cuotas" CaptionLocation="Top" Index="1" RelativeSize="13.525835866261398" IsNewNode="True">
+                    <LayoutItem Id="FechaCuota" ViewItem="FechaCuota" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                    <LayoutItem Id="CuotaAnual" ViewItem="CuotaAnual" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item1" ShowCaption="True" Caption="Tarjeta" CaptionLocation="Top" Index="2" RelativeSize="49.848024316109424" IsNewNode="True">
+                    <LayoutItem Id="Tarjeta" ViewItem="Tarjeta" SizeConstraintsType="Default" Index="0" RelativeSize="10.847457627118644" IsNewNode="True" />
+                    <LayoutItem Id="TarjetaPass" ViewItem="TarjetaPass" SizeConstraintsType="Default" Index="1" RelativeSize="8.1355932203389827" IsNewNode="True" />
+                    <LayoutItem Id="FchVald" ViewItem="FchVald" SizeConstraintsType="Default" Index="2" RelativeSize="8.1355932203389827" IsNewNode="True" />
+                    <LayoutItem Id="Cvc" ViewItem="Cvc" Index="3" RelativeSize="72.881355932203391" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item8" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" RelativeSize="100" Caption="Beneficiarios" IsNewNode="True">
+                <LayoutGroup Id="Beneficiarios_Group" ShowCaption="True" Caption="Beneficiarios" Index="0" RelativeSize="100" Direction="Vertical" IsNewNode="True">
+                  <LayoutItem Id="Beneficiarios" ViewItem="Beneficiarios" Index="0" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item9" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="2" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="Aclaraciones" ShowCaption="True" Index="0" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="Aclaraciones" ViewItem="Aclaraciones" Index="0" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="Bancaria" RelativeSize="100" Caption="Bancaria" Removed="True">
+              <LayoutGroup Id="Bancaria_col1" RelativeSize="50">
+                <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="56.756756756756758" Caption="Cuenta" IsNewNode="True">
+                  <LayoutItem Id="Clave" ViewItem="Clave" SizeConstraintsType="Default" Index="0" RelativeSize="10.526315789473685" IsNewNode="True" />
+                  <LayoutItem Id="Clabe" ViewItem="Clabe" SizeConstraintsType="Default" Index="1" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                  <LayoutItem Id="NmrClnt" ViewItem="NmrClnt" SizeConstraintsType="Default" Index="2" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                  <LayoutItem Id="Tipo" ViewItem="Tipo" SizeConstraintsType="Default" Index="3" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                  <LayoutItem Id="Status" ViewItem="Status" SizeConstraintsType="Default" Index="4" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                  <LayoutItem Id="Descripcion" ViewItem="Descripcion" SizeConstraintsType="Default" Index="5" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                  <LayoutItem Id="Banco" ViewItem="Banco" SizeConstraintsType="Default" Index="6" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                  <LayoutItem Id="Sucursal" ViewItem="Sucursal" SizeConstraintsType="Default" Index="7" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                  <LayoutItem Id="Moneda" ViewItem="Moneda" SizeConstraintsType="Default" Index="8" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                  <LayoutItem Id="Telefono" ViewItem="Telefono" SizeConstraintsType="Default" Index="9" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                  <LayoutItem Id="DiaCorte" ViewItem="DiaCorte" SizeConstraintsType="Default" Index="10" RelativeSize="7.8947368421052628" IsNewNode="True" />
+                  <LayoutItem Id="DiaPago" ViewItem="DiaPago" SizeConstraintsType="Default" Index="11" RelativeSize="10.526315789473685" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Banco" SizeConstraintsType="Default" Index="1" RelativeSize="4.4117647058823533" ViewItem="Banco" Removed="True" />
+                <LayoutItem Id="FechaAlta" SizeConstraintsType="Default" Index="1" RelativeSize="4.4117647058823533" ViewItem="FechaAlta" Removed="True" />
+                <LayoutGroup Id="Item5" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="18.918918918918919" Caption="Fechas" IsNewNode="True">
+                  <LayoutItem Id="FechaUltimoMov" ViewItem="FechaUltimoMov" SizeConstraintsType="Default" Index="0" RelativeSize="36.363636363636367" IsNewNode="True" />
+                  <LayoutItem Id="FechaAlta" ViewItem="FechaAlta" SizeConstraintsType="Default" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
+                  <LayoutItem Id="FApertura" ViewItem="FApertura" SizeConstraintsType="Default" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Moneda" SizeConstraintsType="Default" Index="1" RelativeSize="4.4117647058823533" ViewItem="Moneda" Removed="True" />
+                <LayoutItem Id="Status" SizeConstraintsType="Default" Index="1" RelativeSize="4.4117647058823533" ViewItem="Status" Removed="True" />
+                <LayoutItem Id="Sucursal" SizeConstraintsType="Default" RelativeSize="4.4117647058823533" Index="1" ViewItem="Sucursal" Removed="True" />
+                <LayoutItem Id="FechaUltimoMov" SizeConstraintsType="Default" Index="2" RelativeSize="4.3875685557586834" ViewItem="FechaUltimoMov" Removed="True" />
+                <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Index="2" RelativeSize="24.324324324324323" Caption="Web" IsNewNode="True">
+                  <LayoutItem Id="Url" ViewItem="Url" SizeConstraintsType="Default" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                  <LayoutItem Id="WebUsuario" ViewItem="WebUsuario" SizeConstraintsType="Default" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+                  <LayoutItem Id="WebNip" ViewItem="WebNip" SizeConstraintsType="Default" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
+                  <LayoutItem Id="WebClave" ViewItem="WebClave" SizeConstraintsType="Default" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="VerificaSaldo" SizeConstraintsType="Default" Index="2" RelativeSize="4.4117647058823533" ViewItem="VerificaSaldo" Removed="True" />
+                <LayoutItem Id="CuotaAnual" SizeConstraintsType="Default" Index="3" RelativeSize="5.3781512605042021" ViewItem="CuotaAnual" Removed="True" />
+                <LayoutItem Id="Telefono" SizeConstraintsType="Default" RelativeSize="4.4117647058823533" ViewItem="Telefono" Index="4" Removed="True" />
+                <LayoutItem Id="Url" SizeConstraintsType="Default" RelativeSize="4.2780748663101607" Index="12" ViewItem="Url" Removed="True" />
+                <LayoutItem Id="WebClave" SizeConstraintsType="Default" RelativeSize="4.4117647058823533" Index="13" ViewItem="WebClave" Removed="True" />
+                <LayoutItem Id="WebNip" SizeConstraintsType="Default" RelativeSize="4.4117647058823533" Index="13" ViewItem="WebNip" Removed="True" />
+                <LayoutItem Id="WebUsuario" SizeConstraintsType="Default" RelativeSize="4.2780748663101607" Index="13" ViewItem="WebUsuario" Removed="True" />
+                <LayoutItem Id="ComisionSm" SizeConstraintsType="Default" RelativeSize="42.184873949579831" Index="14" ViewItem="ComisionSm" Removed="True" />
+                <LayoutItem Id="Saldominimo" SizeConstraintsType="Default" RelativeSize="4.0336134453781511" Index="14" ViewItem="Saldominimo" Removed="True" />
+                <LayoutItem Id="SaldoPromedio" SizeConstraintsType="Default" RelativeSize="4.0336134453781511" Index="14" ViewItem="SaldoPromedio" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Bancaria_col2" RelativeSize="50">
+                <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="40.54054054054054" Caption="Saldos" IsNewNode="True">
+                  <LayoutItem Id="SaldoInicial" ViewItem="SaldoInicial" SizeConstraintsType="Default" Index="0" RelativeSize="15.384615384615385" IsNewNode="True" />
+                  <LayoutItem Id="SaldoFinal" ViewItem="SaldoFinal" SizeConstraintsType="Default" Index="1" RelativeSize="11.538461538461538" IsNewNode="True" />
+                  <LayoutItem Id="SaldoPromedio" ViewItem="SaldoPromedio" SizeConstraintsType="Default" Index="2" RelativeSize="11.538461538461538" IsNewNode="True" />
+                  <LayoutItem Id="SaldoTransito" ViewItem="SaldoTransito" SizeConstraintsType="Default" Index="3" RelativeSize="11.538461538461538" IsNewNode="True" />
+                  <LayoutItem Id="SaldoLimite" ViewItem="SaldoLimite" SizeConstraintsType="Default" Index="4" RelativeSize="11.538461538461538" IsNewNode="True" />
+                  <LayoutItem Id="Saldominimo" ViewItem="Saldominimo" SizeConstraintsType="Default" Index="5" RelativeSize="11.538461538461538" IsNewNode="True" />
+                  <LayoutItem Id="VerificaSaldo" ViewItem="VerificaSaldo" SizeConstraintsType="Default" Index="6" RelativeSize="11.538461538461538" IsNewNode="True" />
+                  <LayoutItem Id="ComisionSm" ViewItem="ComisionSm" SizeConstraintsType="Default" Index="7" RelativeSize="15.384615384615385" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="FechaCuota" SizeConstraintsType="Default" RelativeSize="4.0336134453781511" Index="1" ViewItem="FechaCuota" Removed="True" />
+                <LayoutGroup Id="Item6" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="14.864864864864865" Caption="Cuotas" IsNewNode="True">
+                  <LayoutItem Id="FechaCuota" ViewItem="FechaCuota" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                  <LayoutItem Id="CuotaAnual" ViewItem="CuotaAnual" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="SaldoLimite" SizeConstraintsType="Default" RelativeSize="4.2780748663101607" Index="1" ViewItem="SaldoLimite" Removed="True" />
+                <LayoutItem Id="SaldoTransito" SizeConstraintsType="Default" RelativeSize="4.2780748663101607" Index="1" ViewItem="SaldoTransito" Removed="True" />
+                <LayoutItem Id="DiaCorte" SizeConstraintsType="Default" RelativeSize="4.3875685557586834" Index="2" ViewItem="DiaCorte" Removed="True" />
+                <LayoutItem Id="DiaPago" SizeConstraintsType="Default" RelativeSize="4.1450777202072535" Index="2" ViewItem="DiaPago" Removed="True" />
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="2" RelativeSize="44.5945945945946" Caption="Tarjeta" IsNewNode="True">
+                  <LayoutItem Id="Tarjeta" ViewItem="Tarjeta" SizeConstraintsType="Default" Index="0" RelativeSize="13.793103448275861" IsNewNode="True" />
+                  <LayoutItem Id="TarjetaPass" ViewItem="TarjetaPass" SizeConstraintsType="Default" Index="1" RelativeSize="10.344827586206897" IsNewNode="True" />
+                  <LayoutItem Id="FchVald" ViewItem="FchVald" SizeConstraintsType="Default" Index="2" RelativeSize="75.862068965517238" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="PorcentajeInteres" SizeConstraintsType="Default" RelativeSize="4.0336134453781511" Index="5" ViewItem="PorcentajeInteres" Removed="True" />
+                <LayoutItem Id="Tipo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Index="5" ViewItem="Tipo" Removed="True" />
+                <LayoutItem Id="Intereses" SizeConstraintsType="Default" RelativeSize="4.0336134453781511" Index="6" ViewItem="Intereses" Removed="True" />
+                <LayoutItem Id="NumeroCheque" SizeConstraintsType="Default" RelativeSize="4.0336134453781511" Index="10" ViewItem="NumeroCheque" Removed="True" />
+                <LayoutItem Id="CapturaCheque" SizeConstraintsType="Default" RelativeSize="4.0336134453781511" Index="11" ViewItem="CapturaCheque" Removed="True" />
+                <LayoutItem Id="Tarjeta" SizeConstraintsType="Default" RelativeSize="4.3557168784029034" Index="11" ViewItem="Tarjeta" Removed="True" />
+                <LayoutItem Id="FchVald" SizeConstraintsType="Default" Index="12" RelativeSize="35.650623885918" ViewItem="FchVald" Removed="True" />
+                <LayoutItem Id="TarjetaPass" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Index="12" ViewItem="TarjetaPass" Removed="True" />
+                <LayoutItem Id="Clabe" SizeConstraintsType="Default" RelativeSize="6.3829787234042552" ViewItem="Clabe" Removed="True" />
+                <LayoutItem Id="FApertura" ViewItem="FApertura" Removed="True" />
+                <LayoutItem Id="NmrClnt" ViewItem="NmrClnt" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Cuenta" RelativeSize="28.144654088050313" Caption="Cuenta" Direction="Horizontal" Removed="True">
+              <LayoutItem Id="Clave" ViewItem="Clave" Removed="True" />
+              <LayoutItem Id="Descripcion" ViewItem="Descripcion" Removed="True" />
+              <LayoutItem Id="SaldoFinal" ViewItem="SaldoFinal" Removed="True" />
+              <LayoutItem Id="SaldoInicial" ViewItem="SaldoInicial" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="15.567282321899736" Removed="True">
+            <LayoutGroup Id="Aclaraciones" Removed="True" />
+            <LayoutGroup Id="Beneficiarios" RelativeSize="0" Direction="Horizontal">
+              <LayoutItem Id="Beneficiarios" RelativeSize="100" ViewItem="Beneficiarios" Removed="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Bancaria_ListView" IsGroupPanelVisible="True" IsFooterVisible="False" AutoExpandAllGroups="True" MasterDetailMode="ListViewOnly">
+      <Columns>
+        <ColumnInfo Id="Moneda" Index="-1" />
+        <ColumnInfo Id="Clave" Index="0" Width="66" />
+        <ColumnInfo Id="Descripcion" Index="1" Width="74" />
+        <ColumnInfo Id="Banco" Index="2" Width="49" />
+        <ColumnInfo Id="FechaUltimoMov" Index="3" Width="96" />
+        <ColumnInfo Id="SaldoFinal" Index="4" SortIndex="0" SortOrder="Ascending" Width="84" />
+        <ColumnInfo Id="SldDspnbl" Index="5" Width="69" />
+        <ColumnInfo Id="Tipo" Index="6" SortOrder="Ascending" GroupIndex="0" Width="53" />
+        <ColumnInfo Id="Status" Index="7" Width="51" />
+      </Columns>
+      <Filters>
+        <Filter Id="CntsActvs" Caption="Cuentas Activas" Criteria="[Status] = ##Enum#Cap.Generales.BusinessObjects.General.StatusTipoA,Activa#" IsNewNode="True" />
+        <Filter Id="CntsBj" Caption="Cuentas Baja" Criteria="[Status] = ##Enum#Cap.Generales.BusinessObjects.General.StatusTipoA,Baja#" IsNewNode="True" />
+        <Filter Id="CntsSld" Caption="Cuentas con Saldo" Criteria="[SaldoFinal] &lt;&gt; 0.0m" IsNewNode="True" />
+        <Filter Id="TodasCnts" Caption="Todas las cuentas" IsNewNode="True" />
+      </Filters>
+    </ListView>
+  </Views>
+</Application>
