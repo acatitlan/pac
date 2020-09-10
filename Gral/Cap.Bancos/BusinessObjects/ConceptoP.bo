@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="Cap.Bancos.BusinessObjects.ConceptoP" IsDesigned="True" />
+  </BOModel>
+  <Views>
+    <ListView Id="ConceptoP_ListView" IsFooterVisible="False" />
+    <ListView Id="Presupuesto_Partidas_ListView" IsFooterVisible="True">
+      <Columns>
+        <ColumnInfo Id="Monto" Index="-1" />
+        <ColumnInfo Id="Abono">
+          <Summary>
+            <ColumnSummaryItem Id="Abonos" SummaryType="Sum" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+        <ColumnInfo Id="Cargo">
+          <Summary>
+            <ColumnSummaryItem Id="Cargos" SummaryType="Sum" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
