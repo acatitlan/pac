@@ -832,28 +832,10 @@ namespace FCap.Module.Controllers
 
         private void simpleActionCreaPdf_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
-            /*
-            CreaPdfImprime(false, true);*/
         }
 
         private void simpleActionViewPdf_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
-            /*
-            if (View != null)
-            {
-                DocumentoSalida doc = View.CurrentObject as DocumentoSalida;
-                if (doc != null)
-                {
-                    Process process = new Process();
-                    string path = NamePdf(doc, DocumentoStatus.Sellada, "pdf");
-                    if (File.Exists(path))
-                    {
-                        process.StartInfo.FileName = path;
-                        process.Start();
-                        process.WaitForInputIdle();
-                    }
-                }
-            }*/
         }
 
         private void simpleActionVerXML_Execute(object sender, SimpleActionExecuteEventArgs e)
