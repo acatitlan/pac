@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="FCap.Module.BusinessObjects.Compras.Recepcion" IsDesigned="True" />
+  </BOModel>
+  <Views>
+    <DetailView Id="Recepcion_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="26.072607260726073">
+            <LayoutGroup Id="DocumenEnt" Index="0" RelativeSize="100" Caption="Proveedor" Direction="Horizontal">
+              <LayoutGroup Id="Auto4a23d495-be34-4d9b-b14b-08d6e75e6b1d" ShowCaption="False" Caption="Auto4a23d495-be34-4d9b-b14b-08d6e75e6b1d(4)" Index="0" RelativeSize="50" IsNewNode="True">
+                <LayoutItem Id="Clave" ViewItem="Clave" SizeConstraintsType="Default" Index="0" RelativeSize="20.253164556962027" IsNewNode="True" />
+                <LayoutItem Id="Refer" ViewItem="Refer" SizeConstraintsType="Default" Index="1" RelativeSize="15.189873417721518" IsNewNode="True" />
+                <LayoutItem Id="Proveedor" ViewItem="Proveedor" SizeConstraintsType="Default" Index="2" RelativeSize="15.189873417721518" IsNewNode="True" />
+                <LayoutItem Id="RFC" ViewItem="RFC" Index="3" RelativeSize="15.189873417721518" IsNewNode="True" />
+                <LayoutItem Id="FechaAlta" ViewItem="FechaAlta" SizeConstraintsType="Default" Index="4" RelativeSize="15.189873417721518" IsNewNode="True" />
+                <LayoutItem Id="FechaDoc" ViewItem="FechaDoc" SizeConstraintsType="Default" Index="5" RelativeSize="18.9873417721519" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto81aac920-6662-4d0d-a2fa-b71a729cc418" ShowCaption="False" Caption="Auto81aac920-6662-4d0d-a2fa-b71a729cc418(9)" Index="1" RelativeSize="50" IsNewNode="True">
+                <LayoutItem Id="Moneda" ViewItem="Moneda" SizeConstraintsType="Default" Index="0" RelativeSize="20.253164556962027" IsNewNode="True" />
+                <LayoutItem Id="TipoCambio" ViewItem="TipoCambio" SizeConstraintsType="Default" Index="1" RelativeSize="15.189873417721518" IsNewNode="True" />
+                <LayoutItem Id="FechaCan" ViewItem="FechaCan" SizeConstraintsType="Default" Index="2" RelativeSize="15.189873417721518" IsNewNode="True" />
+                <LayoutItem Id="Cncpt" ViewItem="Cncpt" Index="3" RelativeSize="49.367088607594937" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="Proveedor" SizeConstraintsType="Default" Index="1" RelativeSize="48.387096774193552" ViewItem="Proveedor" Removed="True" />
+              <LayoutItem Id="RFC" ViewItem="RFC" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Documen" Index="1" RelativeSize="77.130977130977129" Direction="Horizontal" Removed="True">
+              <LayoutGroup Id="Documen_col1" Removed="True" />
+              <LayoutGroup Id="Documen_col2" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Recepcion" Direction="Horizontal" Index="1" RelativeSize="19.760479041916167" Caption="Arch Xml" Removed="True">
+              <LayoutItem Id="ArchPdf" ViewItem="ArchPdf" Removed="True" />
+              <LayoutItem Id="ArchXml" ViewItem="ArchXml" Removed="True" />
+              <LayoutItem Id="Refer" ViewItem="Refer" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="5.9405940594059405" Direction="Vertical" Caption="Notas">
+            <LayoutGroup Id="Auto4d534545-41dd-4ed6-b5db-581b91e17a62" ShowCaption="False" Caption="Auto4d534545-41dd-4ed6-b5db-581b91e17a62(23)" Direction="Horizontal" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="ArchXml" ViewItem="ArchXml" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+              <LayoutItem Id="ArchPdf" ViewItem="ArchPdf" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutItem Id="Notas" SizeConstraintsType="Default" RelativeSize="49.923896499238964" ViewItem="Notas" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="RecepcionItems_Group" Direction="Vertical" RelativeSize="45.874587458745872">
+            <LayoutItem Id="RecepcionItems" SizeConstraintsType="Default" RelativeSize="100" ViewItem="RecepcionItems" />
+          </LayoutGroup>
+          <LayoutGroup Id="Autob92aaf39-70dc-46f1-b8cd-d1f374e898b6" ShowCaption="False" Caption="" Direction="Horizontal" Index="3" RelativeSize="22.112211221122113" IsNewNode="True">
+            <LayoutItem Id="Notas" ViewItem="Notas" CaptionLocation="Top" Index="0" RelativeSize="50" IsNewNode="True" />
+            <LayoutGroup Id="Auto4f71c4ec-1e2f-46bc-88ba-9100fccb5094" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
+              <LayoutItem Id="SubTotal" ViewItem="SubTotal" Index="0" RelativeSize="22.388059701492537" IsNewNode="True" />
+              <LayoutItem Id="DescFinanciero" ViewItem="DescFinanciero" Index="1" RelativeSize="17.910447761194028" IsNewNode="True" />
+              <LayoutItem Id="DescuentoTotal" ViewItem="DescuentoTotal" Index="2" RelativeSize="17.910447761194028" IsNewNode="True" />
+              <LayoutItem Id="Impuesto04" ViewItem="Impuesto04" Index="3" RelativeSize="17.910447761194028" IsNewNode="True" />
+              <LayoutItem Id="Total" ViewItem="Total" Index="4" RelativeSize="23.880597014925375" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Recepcion_ListView">
+      <Columns>
+        <ColumnInfo Id="EnvioC" Index="-1" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
