@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="Cap.Bancos.BusinessObjects.Transferencia" IsDesigned="True" />
+  </BOModel>
+  <Views>
+    <DetailView Id="Transferencia_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Transferencia" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="Auto40fbc3f9-442f-412d-9cf7-b0175b8050d2" ShowCaption="False" Direction="Horizontal" Index="0" RelativeSize="16.135084427767353" IsNewNode="True">
+                <LayoutGroup Id="Auto35ce77eb-9d1f-4c4c-8453-4f542fa687a2" ShowCaption="False" Index="0" RelativeSize="49.917355371900825" IsNewNode="True">
+                  <LayoutItem Id="CtaOrigen" ViewItem="CtaOrigen" Index="0" RelativeSize="37.2093023255814" IsNewNode="True" />
+                  <LayoutItem Id="CntOrgnDscrpcn" ViewItem="CntOrgnDscrpcn" Index="1" RelativeSize="27.906976744186046" IsNewNode="True" />
+                  <LayoutItem Id="CntOrgnSldDspnbl" ViewItem="CntOrgnSldDspnbl" Index="2" RelativeSize="34.883720930232556" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Auto10afeda8-eb71-4557-9370-822613aa02a7" ShowCaption="False" Index="1" RelativeSize="50.082644628099175" IsNewNode="True">
+                  <LayoutItem Id="CtaDestino" ViewItem="CtaDestino" Index="0" RelativeSize="37.2093023255814" IsNewNode="True" />
+                  <LayoutItem Id="CntDstnDscrpcn" ViewItem="CntDstnDscrpcn" Index="1" RelativeSize="27.906976744186046" IsNewNode="True" />
+                  <LayoutItem Id="CntOrgnSldFnl" ViewItem="CntOrgnSldFnl" Index="2" RelativeSize="34.883720930232556" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Autoc5b44984-6f66-47b8-8dc4-4fb15570022b" ShowCaption="False" Direction="Horizontal" Index="1" RelativeSize="6.191369606003752" IsNewNode="True">
+                <LayoutItem Id="Monto" ViewItem="Monto" Index="0" RelativeSize="49.917355371900825" IsNewNode="True" />
+                <LayoutItem Id="FecApli" ViewItem="FecApli" Index="1" RelativeSize="50.082644628099175" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Transferencia_col1" Index="1" RelativeSize="41.419141914191421" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="CntOrgnDscrpcn" Index="0" RelativeSize="100" ViewItem="CntOrgnDscrpcn" Removed="True" />
+                <LayoutItem Id="CtaDestino" Index="1" RelativeSize="93.7984496124031" ViewItem="CtaDestino" Removed="True" />
+                <LayoutItem Id="CtaOrigen" ViewItem="CtaOrigen" Removed="True" />
+              </LayoutGroup>
+              <LayoutItem Id="Notas" ViewItem="Notas" Index="2" RelativeSize="77.673545966228886" IsNewNode="True" />
+              <LayoutGroup Id="Transferencia_col2" Index="2" RelativeSize="27.722772277227723" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="FecApli" RelativeSize="100" Index="0" ViewItem="FecApli" Removed="True" />
+                <LayoutItem Id="Monto" RelativeSize="52.908067542213885" Index="0" ViewItem="Monto" Removed="True" />
+                <LayoutItem Id="CntDstnDscrpcn" RelativeSize="6.2015503875969" ViewItem="CntDstnDscrpcn" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="75.447154471544721" Direction="Horizontal" Caption="Notas" Removed="True">
+            <LayoutItem Id="Notas" ViewItem="Notas" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
