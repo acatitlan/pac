@@ -21,14 +21,7 @@ namespace Cap.Bancos.Controllers
             TargetObjectType = typeof(MovimientoB);
 
             simpleActionCanclr.TargetObjectsCriteria = "Status != 'Cancelado'";
-                // string.Format("Status != {0}", MovimientoStatus.Cancelado.GetHashCode());
             simpleActionAplTrnst.TargetObjectsCriteria = "Status = 'Transito'";
-
-
-            /*Dic 2019, para mostrar el dialogo filtro del reporte
-            PopupWindowShowAction action = new PopupWindowShowAction(this, "ShowPopup", DevExpress.Persistent.Base.PredefinedCategory.View);
-            action.CustomizePopupWindowParams += new CustomizePopupWindowParamsEventHandler(action_CustomizePopupWindowParams);
-            action.Execute += new PopupWindowShowActionExecuteEventHandler(action_Execute);*/
         }
         protected override void OnActivated()
         {
@@ -59,14 +52,6 @@ namespace Cap.Bancos.Controllers
 
         private void simpleActionRprtMovsmnts_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
-            /*Obsolete
-            string nameR = "Movimientos";
-
-            ReportData donneesEtat = (from reportData in new XPQuery<ReportData>(((XPObjectSpace)View.ObjectSpace).Session)
-                                      where reportData.ReportName == nameR
-                                      select reportData).FirstOrDefault();
-
-            Frame.GetController<ReportServiceController>().ShowPreview(donneesEtat, null);*/
             string format = "MovimientosB";
             IObjectSpace objectSpace =
                 ReportDataProvider.ReportObjectSpaceProvider.CreateObjectSpace(typeof(ReportDataV2));
@@ -119,23 +104,10 @@ namespace Cap.Bancos.Controllers
 
         void action_CustomizePopupWindowParams(object sender, CustomizePopupWindowParamsEventArgs e)
         {
-            /*
-            RPOMovimiento2 obj = new RPOMovimiento2();
-            e.View = Application.CreateDetailView(Application.CreateObjectSpace(), obj);*/
         }
 
         void action_Execute(object sender, PopupWindowShowActionExecuteEventArgs e)
         {
-            /* Dic 2019 para mostrar el dialogo filtro y luego el reporte pero no pude.
-            IObjectSpace objectSpace = ReportDataProvider.ReportObjectSpaceProvider.CreateObjectSpace(typeof(ReportDataV2));
-            IReportDataV2 reportData = objectSpace.FindObject<ReportDataV2>(CriteriaOperator.Parse("[DisplayName] = 'MovimientosB'"));
-            string handle = ReportDataProvider.ReportsStorage.GetReportContainerHandle(reportData);
-
-            RPOMovimiento2 obj = e.CurrentObject as RPOMovimiento2;
-            XtraReport report2 = ReportDataProvider.ReportsStorage.LoadReport(reportData);
-            ReportsModuleV2.FindReportsModule(Application.Modules).ReportsDataSourceHelper.SetupBeforePrint(report2, obj, null, false, null, false);
-
-            report2.ShowPreview();*/
         }
     }
 }
