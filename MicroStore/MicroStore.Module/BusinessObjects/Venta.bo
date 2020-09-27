@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="MicroStore.Module.BusinessObjects.Venta" IsDesigned="True" />
+  </BOModel>
+  <Views>
+    <DetailView Id="Venta_DetailView">
+      <Items>
+        <ActionContainerViewItem Id="AddItem" ActionContainer="Items" IsNewNode="True" />
+        <ActionContainerViewItem Id="SvNw" ActionContainer="Save" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="34.693877551020407">
+            <LayoutGroup Id="Venta" RelativeSize="83.193277310924373">
+              <LayoutGroup Id="Venta_col1" RelativeSize="42.174629324546949">
+                <LayoutItem Id="Prdct" Index="0" RelativeSize="19.512195121951219" ViewItem="Prdct" IsNewNode="True" />
+                <LayoutItem Id="Lt" ViewItem="Lt" Index="1" RelativeSize="14.634146341463415" IsNewNode="True" Removed="True" />
+                <LayoutGroup Id="Auto579b237f-6e7f-4311-bccd-32111437e58c" ShowCaption="False" Direction="Horizontal" Index="2" RelativeSize="17.073170731707318" IsNewNode="True">
+                  <LayoutItem Id="Item1" Index="0" RelativeSize="37.5" ViewItem="Item1" IsNewNode="True" />
+                  <LayoutItem Id="AddItem" ViewItem="AddItem" Index="1" RelativeSize="62.5" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Pg" Index="3" RelativeSize="14.634146341463415" ViewItem="Pg" IsNewNode="True" />
+                <LayoutItem Id="Ttl" Index="4" RelativeSize="14.634146341463415" ViewItem="Ttl" />
+                <LayoutItem Id="Cmb" Index="5" RelativeSize="19.512195121951219" ViewItem="Cmb" />
+              </LayoutGroup>
+              <LayoutGroup Id="Venta_col2" RelativeSize="57.825370675453051">
+                <LayoutItem Id="Cntdd" Index="0" RelativeSize="19.512195121951219" ViewItem="Cntdd" />
+                <LayoutItem Id="FchVnt" Index="1" RelativeSize="14.634146341463415" ViewItem="FchVnt" />
+                <LayoutItem Id="Fl" RelativeSize="14.634146341463415" Index="2" ViewItem="Fl" />
+                <LayoutItem Id="Stts" Index="3" RelativeSize="51.219512195121951" ViewItem="Stts" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Auto8a5444cd-e185-4ca0-b8e3-bb8cd519b378" ShowCaption="False" Direction="Vertical" Index="1" RelativeSize="16.806722689075631" IsNewNode="True">
+              <LayoutItem Id="SvNw" ViewItem="SvNw" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="ItemsVenta_Group" Direction="Vertical" RelativeSize="65.3061224489796">
+            <LayoutItem Id="ItemsVenta" RelativeSize="100" ViewItem="ItemsVenta" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Venta_ListView">
+      <Columns>
+        <ColumnInfo Id="Fl" Index="0" Width="42" />
+        <ColumnInfo Id="Ttl" Index="1" Width="44" />
+        <ColumnInfo Id="FchVnt" Width="80" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
