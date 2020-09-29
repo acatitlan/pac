@@ -1,7 +1,6 @@
 ﻿using Cap.Generales.BusinessObjects.Empresa;
 using Cap.Inventarios.BusinessObjects;
 using Cap.Personas.BusinessObjects;
-using Cap.Ventas.BusinessObjects;
 using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp.ConditionalAppearance;
 using DevExpress.ExpressApp.DC;
@@ -105,9 +104,14 @@ namespace MicroStore.Module.BusinessObjects
         {
             get
             {
+                /* Sep 2020
                 if (!IsLoading && !IsSaving && mTtl == null)
-                    UpdateVentaTotal(false);
+                    UpdateVentaTotal(false);*/
                 return mTtl;
+            }
+            set 
+            {
+                SetPropertyValue("Ttl", ref mTtl, value);
             }
         }
 
@@ -164,10 +168,16 @@ namespace MicroStore.Module.BusinessObjects
             }
         }
 
+        private float mCntdd;
+        [ImmediatePostData]
         [VisibleInListView(false)]
         [DevExpress.Xpo.DisplayName("Cantidad")]
         [NonPersistent]
-        public float Cntdd;
+        public float Cntdd 
+        { 
+            get { return mCntdd; }
+            set { SetPropertyValue("Cntdd", ref mCntdd, value); }
+        }
 
         private string mFl;
         [Appearance("Venta.Fl", Context = "DetailView", Enabled = false, FontStyle = FontStyle.Italic)]
@@ -308,7 +318,7 @@ namespace MicroStore.Module.BusinessObjects
             get { return ItemsVenta != null && ItemsVenta.Count > 0; }
         }
 
-        
+
         public override void AfterConstruction()
         {
             base.AfterConstruction();
@@ -345,48 +355,70 @@ namespace MicroStore.Module.BusinessObjects
 
         public void AddItem()
         {
-            if (/*!string.IsNullOrEmpty(mPrdctCptr)*/Prdct != null)
+            if (Prdct != null)
             {
-                Producto prd = Prdct; // Session.FindObject<Producto>(new BinaryOperator("Clv", mPrdctCptr));
+                Producto prd = Prdct;
 
-                if (prd != null)
+                CnLt = prd.Lotes;
+                VentaItem itm = new VentaItem(Session);
+                if (prd.Lotes)
                 {
-                    CnLt = prd.Lotes;
-                    if (prd.Lotes)
+                    if (Lt != null)
                     {
-                        if (Lt != null)
-                        {
-                            VentaItem itm = new VentaItem(Session);
-
-                            itm.Cntdd = Cntdd;
-                            itm.Prdct = prd;
-                            itm.Prc = itm.Prdct.PrecioPublico;
-                            itm.Lt = Lt.Lt;
-
-                            ItemsVenta.Add(itm);
-                            UpdateVentaTotal(true);
-
-                            /*
-                            mPrdctCptr = string.Empty;*/
-                            Prdct = null;
-                            Lt = null;
-                        }
-                    }
-                    else
-                    {
-                        VentaItem itm = new VentaItem(Session);
-
                         itm.Cntdd = Cntdd;
                         itm.Prdct = prd;
                         itm.Prc = itm.Prdct.PrecioPublico;
+                        itm.Lt = Lt.Lt;
 
+                        /*
                         ItemsVenta.Add(itm);
-                        UpdateVentaTotal(true);
+                        UpdateVentaTotal(true);*/
 
+                        /*
+                        mPrdctCptr = string.Empty;*/
                         Prdct = null;
                         Lt = null;
                     }
                 }
+                else
+                {
+                    itm.Cntdd = Cntdd;
+                    itm.Prdct = prd;
+                    itm.Prc = itm.Prdct.PrecioPublico;
+
+                    /*
+                    ItemsVenta.Add(itm);
+                    UpdateVentaTotal(true);*/
+
+                    Prdct = null;
+                    Lt = null;
+                }
+
+                /*
+                float auxCnt = itm.Cntdd;
+                foreach (VentaItem vi in this.ItemsVenta)
+                {
+                    if (vi.Prdct.Clave == prd.Clave)
+                        auxCnt += vi.Cntdd;
+                }
+
+                decimal auxPrc = itm.Prdct.PrecioPublico;
+                foreach (ProductoPrecios prcds in prd.Precios)
+                {
+                    if (prcds.Cntdd != null && auxCnt >= prcds.Cntdd)
+                        auxPrc = prcds.Prc;
+                }
+                foreach (VentaItem vi in this.ItemsVenta)
+                {
+                    if (vi.Prdct.Clave == prd.Clave)
+                        vi.Prc = auxPrc;
+                }
+                itm.Prc = auxPrc;*/
+
+                ItemsVenta.Add(itm);
+                /*Sep 2020
+                UpdateVentaTotal(true);*/
+                Cntdd = 1;
             }
         }
     }
