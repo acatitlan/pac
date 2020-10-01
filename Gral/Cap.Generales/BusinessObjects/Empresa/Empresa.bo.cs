@@ -1,6 +1,6 @@
 ﻿/*
- * javier1604@gmail.com
- * CJLC
+ * tlacaelel.icpac@gmail.com
+ * TIT
  *
  * Date: 21/ Mar /2016
  * Time: 09:59 a. m.
@@ -13,7 +13,6 @@ using Cap.Generales.BusinessObjects.Object;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.ConditionalAppearance;
 using DevExpress.ExpressApp.Editors;
-using DevExpress.ExpressApp.Security.Strategy;
 using DevExpress.Persistent.Base;
 using DevExpress.Xpo;
 using DevExpress.ExpressApp.Model;
@@ -24,7 +23,6 @@ namespace Cap.Generales.BusinessObjects.Empresa
 {
     [XafDefaultProperty("Compania.Nombre")]
     [NavigationItem("Configuración")]
-    // [NavigationItem("General")]
     [ImageName("BO_Organization")]
     public partial class Empresa : ISingleton
     {
@@ -59,7 +57,6 @@ namespace Cap.Generales.BusinessObjects.Empresa
             get { return mUsuario; }
             set { SetPropertyValue("Usuario", ref mUsuario, value); }
         }
-        //#endregion
 
         private string mPassw;
         [DevExpress.Xpo.DisplayName("Contraseña")]
@@ -74,10 +71,10 @@ namespace Cap.Generales.BusinessObjects.Empresa
         }
 
         private string mContra;
-        [DevExpress.Xpo.DisplayName("Licencia")]
+        [DisplayName("Licencia")]
         /*TIT Oct 2017 Bueno, puede pagarme por el programa y usarlo con otro distribuidor sin pagarme timbres ! 
         [Appearance("Contra", AppearanceItemType = "LayoutItem", Context = "DetailView", Visibility = ViewItemVisibility.Hide, Method = "Sin_Cfdi")]*/
-        [Size(50)]
+        [Size(150)]
         public string Contra
         {
             get { return mContra; }
@@ -94,7 +91,6 @@ namespace Cap.Generales.BusinessObjects.Empresa
         }*/
         //#endregion
 
-        #region + Status
         /*
         private StatusTipo mStatus;
         public StatusTipo Status
@@ -102,7 +98,6 @@ namespace Cap.Generales.BusinessObjects.Empresa
             get { return mStatus; }
             set { SetPropertyValue("Status", ref mStatus, value); }
         }*/
-        #endregion
 
         private string mRegimen;
         /// <summary>
