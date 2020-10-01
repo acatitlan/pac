@@ -34,7 +34,7 @@ namespace Cap.Generales.BusinessObjects.Empresa
         [Indexed(Unique = true), Size(10)]
         public string Clave
         {
-            get { return FClave/*.Trim()*/; }
+            get { return FClave; }
             set { SetPropertyValue("Clave", ref FClave, value); }
         }
 
@@ -80,24 +80,7 @@ namespace Cap.Generales.BusinessObjects.Empresa
             get { return mContra; }
             set { SetPropertyValue("Contra", ref mContra, value); }
         }
-        /*
-        [Appearance("Contra", AppearanceItemType = "LayoutItem", Context = "DetailView", Visibility = ViewItemVisibility.Hide, Method = "Sin_Cfdi")]
-        [Size(15)]
-        [NonPersistent]
-        public string Contra
-        {
-            get { return Passw; }
-            set { Passw = value; }
-        }*/
-        //#endregion
 
-        /*
-        private StatusTipo mStatus;
-        public StatusTipo Status
-        {
-            get { return mStatus; }
-            set { SetPropertyValue("Status", ref mStatus, value); }
-        }*/
 
         private string mRegimen;
         /// <summary>
@@ -129,30 +112,6 @@ namespace Cap.Generales.BusinessObjects.Empresa
             get { return GetDelayedPropertyValue<Image>("Logo"); }
             set { SetDelayedPropertyValue<Image>("Logo", value); }
         }
-
-        #region + CBB
-        /*
-        [Obsolete("En la impresión de la factura se calcula al imprimir ")]
-        / *
-        private readonly XPDelayedProperty bytesImagen = new XPDelayedProperty();* /
-        [Appearance("CBB", AppearanceItemType = "LayoutItem", Context = "DetailView", Visibility = ViewItemVisibility.Hide, Method = "Con_Cfdi"/ *Criteria = "IsCurrentUserInRole('CFDI')", * /)]
-        / *
-        [Delayed("bytesImagen")]* /
-        [ValueConverter(typeof(JpegStorageConverter)), Delayed]
-        public Image CBB
-        {
-            get { return GetDelayedPropertyValue<Image>("CBB"); }
-            set { SetDelayedPropertyValue<Image>("CBB", value); }
-            / *
-            get { return (Image)bytesImagen.Value; }
-            set
-            {
-                bytesImagen.Value = value;
-                if (!IsLoading)
-                    OnChanged("CBB");
-            }* /
-        }*/
-        #endregion
 
         private bool isAdmin()
         {
@@ -198,17 +157,6 @@ namespace Cap.Generales.BusinessObjects.Empresa
             get { return mConCfdi; }
             set { SetPropertyValue("ConCfdi", ref mConCfdi, value); }
         }
-
-        /*
-        private bool mConRet;
-        [Obsolete("En su lugar usar el EsquemaImpuesto")]
-        [XafDisplayName("Con Retenciones")]
-        [Appearance("ConRet", AppearanceItemType = "LayoutItem", Context = "DetailView", Visibility = ViewItemVisibility.Hide, Method = "NoEsAdmin"/ * Criteria = "!IsCurrentUserInRole('Administrator')"* /)]
-        public bool ConRet
-        {
-            get { return mConRet; }
-            set { SetPropertyValue("ConRet", ref mConRet, value); }
-        }*/
 
         private string mSlogan;
         [DisplayName("Eslogan")]
@@ -315,24 +263,5 @@ namespace Cap.Generales.BusinessObjects.Empresa
             Contra = "mdBc591/Q7UJwKzkmTEQ8w==";
             CdlPrfsnl = string.Empty;
         }
-
-        /*POEmpresa
-        // Not null
-        private short mNumero;
-        [Indexed(Unique = true)]
-        public short Numero
-        {
-            get { return mNumero; }
-            set { SetPropertyValue("Numero", ref mNumero, value); }
-        }
-
-        #region + Sucursales
-        [Association("Empresa-Sucursales", typeof(POSucursal)), Aggregated]
-        public XPCollection Sucursales
-        {
-            get { return GetCollection("Sucursales"); }
-        }
-        #endregion
-         */
     }
 }
