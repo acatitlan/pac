@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="FCap.Module.BusinessObjects.Ventas.DocumentoSalida" IsDesigned="True" IsCloneable="True" />
+  </BOModel>
+  <Views>
+    <DetailView Id="DocumentoSalida_DetailView" DefaultFocusedItem="Cliente">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100" ImageName="" Caption="Main" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100" ImageName="" Caption="SimpleEditors" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default">
+            <LayoutGroup Id="DocumentoSalida" RelativeSize="28.754813863928113" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Caption="Encabezado">
+              <LayoutGroup Id="DocumentoSalida_col1" RelativeSize="50.70754716981132" ImageName="" Caption="DocumentoSalida_col1" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default">
+                <LayoutItem Id="Tipo" ViewItem="Tipo" SizeConstraintsType="Default" Index="0" RelativeSize="16.842105263157894" IsNewNode="True" />
+                <LayoutItem Id="Secuencial" SizeConstraintsType="Default" Index="1" RelativeSize="12.631578947368421" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="Secuencial" />
+                <LayoutItem Id="Cliente" SizeConstraintsType="Default" Index="2" RelativeSize="12.631578947368421" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="Cliente" />
+                <LayoutItem Id="Direccion" SizeConstraintsType="Default" Index="3" RelativeSize="12.631578947368421" ViewItem="Direccion" IsNewNode="True" />
+                <LayoutItem Id="Domicilio" SizeConstraintsType="Default" Index="4" RelativeSize="13.043478260869565" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="Domicilio" Removed="True" />
+                <LayoutItem Id="EnviarA" ViewItem="EnviarA" SizeConstraintsType="Default" Index="4" RelativeSize="45.263157894736842" IsNewNode="True" />
+                <LayoutItem Id="RetenISR" SizeConstraintsType="Default" RelativeSize="23" Index="4" ViewItem="RetenISR" Removed="True" />
+                <LayoutItem Id="CuotaC" SizeConstraintsType="Default" Index="5" RelativeSize="20" ViewItem="CuotaC" Removed="True" />
+                <LayoutItem Id="RetenIVA" SizeConstraintsType="Default" RelativeSize="20" Index="5" ViewItem="RetenIVA" Removed="True" />
+                <LayoutItem Id="BanNom" SizeConstraintsType="Default" Index="6" RelativeSize="6" ViewItem="BanNom" Removed="True" />
+                <LayoutItem Id="PorcDesc" SizeConstraintsType="Default" RelativeSize="17" Index="6" ViewItem="PorcDesc" Removed="True" />
+                <LayoutItem Id="Uuid" SizeConstraintsType="Default" Index="6" RelativeSize="17.391304347826086" ViewItem="Uuid" Removed="True" />
+                <LayoutItem Id="Banco" SizeConstraintsType="Default" Index="7" RelativeSize="6" ViewItem="Banco" Removed="True" />
+                <LayoutItem Id="FrmPg" SizeConstraintsType="Default" Index="7" RelativeSize="6" ViewItem="FrmPg" Removed="True" />
+                <LayoutItem Id="LyndPg" SizeConstraintsType="Default" Index="7" RelativeSize="6" ViewItem="LyndPg" Removed="True" />
+                <LayoutItem Id="MtvDscnt" SizeConstraintsType="Default" Index="7" RelativeSize="6" ViewItem="MtvDscnt" Removed="True" />
+                <LayoutItem Id="RecogerEn" SizeConstraintsType="Default" Index="7" RelativeSize="56" ViewItem="RecogerEn" Removed="True" />
+                <LayoutItem Id="NumCtaPago" SizeConstraintsType="Default" RelativeSize="15.384615384615385" ViewItem="NumCtaPago" Removed="True" />
+                <LayoutItem Id="PorcDescFinan" ViewItem="PorcDescFinan" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="DocumentoSalida_col2" RelativeSize="49.29245283018868" ImageName="" Caption="DocumentoSalida_col2" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default">
+                <LayoutItem Id="Uuid" ViewItem="Uuid" SizeConstraintsType="Default" Index="0" RelativeSize="16.842105263157894" IsNewNode="True" />
+                <LayoutItem Id="Autopis" SizeConstraintsType="Default" Index="1" RelativeSize="13.043478260869565" ViewItem="Autopis" Removed="True" />
+                <LayoutItem Id="ConduceA" SizeConstraintsType="Default" Index="1" RelativeSize="7.8947368421052628" ViewItem="ConduceA" Removed="True" />
+                <LayoutItem Id="ConduceDe" SizeConstraintsType="Default" Index="1" RelativeSize="7.3170731707317076" ViewItem="ConduceDe" Removed="True" />
+                <LayoutItem Id="EntregaD" SizeConstraintsType="Default" Index="1" RelativeSize="13.043478260869565" ViewItem="EntregaD" Removed="True" />
+                <LayoutItem Id="Flete" SizeConstraintsType="Default" Index="1" RelativeSize="8.5714285714285712" ViewItem="Flete" Removed="True" />
+                <LayoutItem Id="Manio" SizeConstraintsType="Default" Index="1" RelativeSize="13.043478260869565" ViewItem="Manio" Removed="True" />
+                <LayoutItem Id="Otros" SizeConstraintsType="Default" Index="1" RelativeSize="82.6086956521739" ViewItem="Otros" Removed="True" />
+                <LayoutItem Id="Recolecc" SizeConstraintsType="Default" Index="1" RelativeSize="10.344827586206897" ViewItem="Recolecc" Removed="True" />
+                <LayoutItem Id="Reemb" SizeConstraintsType="Default" Index="1" RelativeSize="6.8181818181818183" ViewItem="Reemb" Removed="True" />
+                <LayoutItem Id="Seguro" SizeConstraintsType="Default" Index="1" RelativeSize="9.375" ViewItem="Seguro" Removed="True" />
+                <LayoutItem Id="SelloSatCan" ViewItem="SelloSatCan" SizeConstraintsType="Default" Index="1" RelativeSize="28.421052631578949" IsNewNode="True" />
+                <LayoutItem Id="ValorD" SizeConstraintsType="Default" Index="1" RelativeSize="6.3829787234042552" ViewItem="ValorD" Removed="True" />
+                <LayoutItem Id="FechaDoc" ViewItem="FechaDoc" SizeConstraintsType="Default" Index="2" RelativeSize="12.631578947368421" IsNewNode="True" />
+                <LayoutItem Id="FechaCan" ViewItem="FechaCan" SizeConstraintsType="Default" Index="3" RelativeSize="12.631578947368421" IsNewNode="True" />
+                <LayoutItem Id="Condicion" ViewItem="Condicion" SizeConstraintsType="Default" Index="4" RelativeSize="12.631578947368421" IsNewNode="True" />
+                <LayoutItem Id="Dstn" SizeConstraintsType="Default" Index="5" RelativeSize="20" ViewItem="Dstn" Removed="True" />
+                <LayoutItem Id="Oprdr" SizeConstraintsType="Default" Index="5" RelativeSize="13.043478260869565" ViewItem="Oprdr" Removed="True" />
+                <LayoutItem Id="Plcs" SizeConstraintsType="Default" Index="5" RelativeSize="11.538461538461538" ViewItem="Plcs" Removed="True" />
+                <LayoutItem Id="Transprt" SizeConstraintsType="Default" Index="5" RelativeSize="30.434782608695652" ViewItem="Transprt" Removed="True" />
+                <LayoutItem Id="UsCfdi" Index="5" RelativeSize="16.842105263157894" />
+                <LayoutItem Id="ReembCn" ViewItem="ReembCn" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Documento" RelativeSize="59" ImageName="" Index="1" Direction="Vertical" Removed="True">
+              <LayoutGroup Id="Documento_col1" RelativeSize="85" ImageName="" Direction="Horizontal">
+                <LayoutItem Id="Notas" ViewItem="Notas" SizeConstraintsType="Default" Index="0" RelativeSize="34" IsNewNode="True" />
+                <LayoutItem Id="SubTotal" SizeConstraintsType="Default" RelativeSize="36" Index="0" ViewItem="SubTotal" Removed="True" />
+                <LayoutItem Id="TipoCambio" SizeConstraintsType="Default" RelativeSize="36" Index="0" ViewItem="TipoCambio" Removed="True" />
+                <LayoutGroup Id="Auto0315beaf-aec1-45b5-81f5-831d1cddc6e5" ShowCaption="False" Caption="" Index="1" RelativeSize="32" IsNewNode="True">
+                  <LayoutItem Id="FrmPago" ViewItem="FrmPago" SizeConstraintsType="Default" Index="0" RelativeSize="30" IsNewNode="True" />
+                  <LayoutItem Id="LeyendaPago" ViewItem="LeyendaPago" SizeConstraintsType="Default" Index="1" RelativeSize="26" IsNewNode="True" />
+                  <LayoutItem Id="MotivDesc" ViewItem="MotivDesc" SizeConstraintsType="Default" Index="2" RelativeSize="13" IsNewNode="True" />
+                  <LayoutItem Id="NumCtaPago" ViewItem="NumCtaPago" SizeConstraintsType="Default" Index="3" RelativeSize="30" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="DescuentoTotal" SizeConstraintsType="Default" RelativeSize="63" Index="1" ViewItem="DescuentoTotal" Removed="True" />
+                <LayoutGroup Id="Autobdec7831-32bf-43f5-bc31-1570c1786922" ShowCaption="False" Caption="" Index="2" RelativeSize="32" IsNewNode="True">
+                  <LayoutItem Id="SubTotal" ViewItem="SubTotal" SizeConstraintsType="Default" Index="0" RelativeSize="17" IsNewNode="True" />
+                  <LayoutItem Id="DescuentoTotal" ViewItem="DescuentoTotal" SizeConstraintsType="Default" Index="1" RelativeSize="13" IsNewNode="True" />
+                  <LayoutItem Id="DescFinanciero" ViewItem="DescFinanciero" SizeConstraintsType="Default" Index="2" RelativeSize="13" IsNewNode="True" />
+                  <LayoutItem Id="RetenIVA" ViewItem="RetenIVA" SizeConstraintsType="Default" Index="3" RelativeSize="13" IsNewNode="True" />
+                  <LayoutItem Id="RetenISR" ViewItem="RetenISR" SizeConstraintsType="Default" Index="4" RelativeSize="13" IsNewNode="True" />
+                  <LayoutItem Id="Impuesto04" ViewItem="Impuesto04" SizeConstraintsType="Default" Index="5" RelativeSize="13" IsNewNode="True" />
+                  <LayoutItem Id="Total" ViewItem="Total" SizeConstraintsType="Default" Index="6" RelativeSize="17" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Moneda" SizeConstraintsType="Default" RelativeSize="28" ViewItem="Moneda" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Documento_col2" RelativeSize="24" ImageName="" Caption="Documento_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="DescFinanciero" ViewItem="DescFinanciero" Removed="True" />
+                <LayoutItem Id="FechaDoc" ViewItem="FechaDoc" Removed="True" />
+                <LayoutItem Id="Impuesto04" ViewItem="Impuesto04" Removed="True" />
+                <LayoutItem Id="Total" ViewItem="Total" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="36.2002567394095" Direction="Horizontal" Caption="Transporte" IsNewNode="True">
+              <LayoutGroup Id="Auto2d2b0afb-ae98-4529-b19c-9eb42d7a08d2" ShowCaption="False" Caption="Auto2d2b0afb-ae98-4529-b19c-9eb42d7a08d2(15)" Index="0" RelativeSize="50.70754716981132" IsNewNode="True">
+                <LayoutItem Id="RecogerEn" ViewItem="RecogerEn" SizeConstraintsType="Default" Index="0" RelativeSize="12.5" IsNewNode="True" />
+                <LayoutItem Id="CuotaC" ViewItem="CuotaC" SizeConstraintsType="Default" Index="1" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="ValorD" ViewItem="ValorD" SizeConstraintsType="Default" Index="2" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="Reemb" ViewItem="Reemb" SizeConstraintsType="Default" Index="3" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="ReembCn" ViewItem="ReembCn" SizeConstraintsType="Default" Index="4" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="ConduceDe" ViewItem="ConduceDe" SizeConstraintsType="Default" Index="5" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="ConduceA" ViewItem="ConduceA" SizeConstraintsType="Default" Index="6" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="Dstn" ViewItem="Dstn" SizeConstraintsType="Default" Index="7" RelativeSize="31.25" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Autodb7f8a0b-6463-435c-81ef-2db9770201c0" ShowCaption="False" Caption="Autodb7f8a0b-6463-435c-81ef-2db9770201c0(24)" Index="1" RelativeSize="49.29245283018868" IsNewNode="True">
+                <LayoutItem Id="Flete" ViewItem="Flete" SizeConstraintsType="Default" Index="0" RelativeSize="12.5" IsNewNode="True" />
+                <LayoutItem Id="Seguro" ViewItem="Seguro" SizeConstraintsType="Default" Index="1" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="Recolecc" ViewItem="Recolecc" SizeConstraintsType="Default" Index="2" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="EntregaD" ViewItem="EntregaD" SizeConstraintsType="Default" Index="3" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="Manio" ViewItem="Manio" SizeConstraintsType="Default" Index="4" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="Autopis" ViewItem="Autopis" SizeConstraintsType="Default" Index="5" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="Otros" ViewItem="Otros" SizeConstraintsType="Default" Index="6" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="Plcs" ViewItem="Plcs" SizeConstraintsType="Default" Index="7" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="Oprdr" ViewItem="Oprdr" SizeConstraintsType="Default" Index="8" RelativeSize="9.375" IsNewNode="True" />
+                <LayoutItem Id="Transprt" ViewItem="Transprt" SizeConstraintsType="Default" Index="9" RelativeSize="12.5" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="VentaItems" ViewItem="VentaItems" SizeConstraintsType="Default" Index="2" RelativeSize="10.141206675224646" CaptionLocation="Top" IsNewNode="True" />
+            <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="3" RelativeSize="24.903722721437742" Caption="Pie" Direction="Horizontal" IsNewNode="True">
+              <LayoutItem Id="Notas" ViewItem="Notas" SizeConstraintsType="Default" Index="0" RelativeSize="24.410377358490567" CaptionLocation="Top" IsNewNode="True" />
+              <LayoutGroup Id="Autob6a269cc-a438-4437-9891-22e55298aa17" ShowCaption="False" Caption="Autob6a269cc-a438-4437-9891-22e55298aa17(41)" Index="1" RelativeSize="37.028301886792455" IsNewNode="True">
+                <LayoutItem Id="FrmPg" ViewItem="FrmPg" SizeConstraintsType="Default" Index="0" RelativeSize="20" IsNewNode="True" />
+                <LayoutItem Id="LyndPg" ViewItem="LyndPg" SizeConstraintsType="Default" Index="1" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="MtvDscnt" ViewItem="MtvDscnt" SizeConstraintsType="Default" Index="2" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="NumCtaPago" ViewItem="NumCtaPago" SizeConstraintsType="Default" Index="3" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="Banco" ViewItem="Banco" SizeConstraintsType="Default" Index="4" RelativeSize="35" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Autoc4247558-ce8d-4677-9d9c-a3e6fd67e9b1" ShowCaption="False" Caption="Autoc4247558-ce8d-4677-9d9c-a3e6fd67e9b1(47)" Index="2" RelativeSize="38.561320754716981" IsNewNode="True">
+                <LayoutItem Id="SubTotal" ViewItem="SubTotal" SizeConstraintsType="Default" Index="0" RelativeSize="20" IsNewNode="True" />
+                <LayoutItem Id="DescuentoTotal" ViewItem="DescuentoTotal" Index="1" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="RetenIVA" ViewItem="RetenIVA" SizeConstraintsType="Default" Index="2" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="RetenISR" ViewItem="RetenISR" SizeConstraintsType="Default" Index="3" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="Impuesto04" ViewItem="Impuesto04" SizeConstraintsType="Default" Index="4" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="Total" ViewItem="Total" SizeConstraintsType="Default" Index="5" RelativeSize="20" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Index="1" RelativeSize="22.601626016260163" Removed="True">
+            <LayoutGroup Id="Portfolio" RelativeSize="0" Direction="Horizontal">
+              <LayoutItem Id="Portfolio" ViewItem="Portfolio" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="VentaItems" Direction="Horizontal" RelativeSize="0" Caption="Venta Items" Removed="True">
+              <LayoutItem Id="VentaItems" ViewItem="VentaItems" Removed="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="0" ImageName="" Direction="Horizontal" Caption="Notas" Removed="True">
+            <LayoutItem Id="Notas" ViewItem="Notas" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DocumentoSalida_ListView">
+      <Columns>
+        <ColumnInfo Id="Clave" Index="1" />
+        <ColumnInfo Id="FechaDoc" Index="2" />
+        <ColumnInfo Id="Status" Index="3" />
+        <ColumnInfo Id="Total" Index="4" />
+        <ColumnInfo Id="EnvioC" Index="5" />
+        <ColumnInfo Id="Tipo" Index="6" />
+        <ColumnInfo Id="Concilia" Index="7" />
+      </Columns>
+      <Filters>
+        <Filter Id="EsteMes" Caption="Este Mes" Criteria="[FechaDoc] &gt; AddDays(Today(), -30)" Index="0" IsNewNode="True" />
+        <Filter Id="NoEnviadas" Criteria="[EnvioC] = ##Enum#FCap.Module.BusinessObjects.EnvioCorreo,NoEnviado#" Caption="No Enviadas" Index="1" IsNewNode="True" />
+        <Filter Id="Canceladas" Caption="Canceladas" Criteria="[Status] = ##Enum#FCap.Module.BusinessObjects.DocumentoStatus,Cancelado#" IsNewNode="True" />
+        <Filter Id="Selladas" Caption="Selladas" Criteria="[Status] = ##Enum#FCap.Module.BusinessObjects.DocumentoStatus,Sellada#" IsNewNode="True" />
+        <Filter Id="Todas" Caption="Todas" IsNewNode="True" />
+      </Filters>
+    </ListView>
+  </Views>
+</Application>
