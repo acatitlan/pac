@@ -344,7 +344,6 @@ namespace Cap.Ventas.BusinessObjects
         /// Puede ser de 1 hasta 40 caracteres 
         /// </summary>
         [VisibleInLookupListView(true)]
-        // [Appearance("Secuencial", Context = "DetailView", Enabled = false, FontStyle = FontStyle.Italic)]
         [VisibleInListView(false)]
         [RuleRequiredField("RuleRequiredField for DocumentoSalida.Secuencial", DefaultContexts.Save, "Debe capturar la Clave", SkipNullOrEmptyValues = false)]
         [Size(20)]
