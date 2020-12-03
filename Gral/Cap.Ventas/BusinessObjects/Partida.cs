@@ -689,6 +689,130 @@ namespace Cap.Ventas.BusinessObjects
         }
         #endregion Total descuento
 
+
+
+        private decimal mTotalImpuesto01;
+        /// <summary>
+        /// Total de impuesto 1
+        /// </summary>
+        //[Appearance("TotalImpuesto01", Context = "DetailView", Enabled = false, FontStyle = FontStyle.Italic)]
+        // [DevExpress.Xpo.DisplayName("Total IVA")]
+        [VisibleInListView(false)]
+        //[NonPersistent]
+        public decimal TotalImpuesto01
+        {
+            get
+            {
+                if (mTotalImpuesto01 == 0)
+                {
+                    /*
+                    decimal val = 0;
+                    if (Producto != null && Producto.Esquema != null)
+                    {
+                        if (Producto.Esquema.AplImpuesto1 == EAplicaImpuesto.Precio)
+                            val = Impuesto01 < 0 ? Importe
+                                * -(decimal)Impuesto01 / 100 : Importe
+                                * (decimal)Impuesto01 / 100;
+                    }
+                    return Math.Round(val, 2, MidpointRounding.AwayFromZero);*/
+                    return Producto != null ?
+                        TotalImpuestoN(Impuesto01, Producto.Esquema.AplImpuesto1) : 0;
+                }
+                else
+                    return mTotalImpuesto01;
+            }
+            set
+            {
+                SetPropertyValue("TotalImpuesto01", ref mTotalImpuesto01, value);
+            }
+        }
+
+        decimal TotalImpuestoN(float impst, EAplicaImpuesto aplImp)
+        {
+            // TI Sep 2017 lo dejé aqui pero según nuestra idea debería ir en Negocio.
+            decimal val = 0;
+            if (Producto != null && Producto.Esquema != null)
+            {
+                if (aplImp == EAplicaImpuesto.Precio)
+                    val = impst < 0 ? (Importe - TotalDescuento) 
+                        * -(decimal)impst / 100 : (Importe - TotalDescuento)
+                        * (decimal)impst / 100;
+                else if (aplImp == EAplicaImpuesto.Acumulado1)
+                    val = impst < 0 ? (Importe - TotalDescuentos)
+                        * -(decimal)impst / 100 : (Importe - TotalDescuentos)
+                        * (decimal)impst / 100;
+                else if (aplImp == EAplicaImpuesto.Acumulado3)
+                    val = impst < 0
+                        ? TotalImpuesto04 * -(decimal)impst / 100
+                        : TotalImpuesto04 * (decimal)impst / 100;
+            }
+
+            return Math.Round(val, 2, MidpointRounding.AwayFromZero);
+        }
+
+        /// <summary>
+        /// Total de impuesto 2
+        /// </summary>
+        [Appearance("TotalImpuesto02", Context = "DetailView", Enabled = false, FontStyle = FontStyle.Italic)]
+        [VisibleInListView(false)]
+        [NonPersistent]
+        public decimal TotalImpuesto02
+        {
+            get
+            {
+                /*
+                decimal val = 0;
+                if (Producto != null && Producto.Esquema != null)
+                {
+                    if (Producto.Esquema.AplImpuesto2 == EAplicaImpuesto.Precio)
+                        val = Impuesto02 < 0 ? Importe
+                            * -(decimal)Impuesto02 / 100 : Importe
+                            * (decimal)Impuesto02 / 100;
+                }
+                return Math.Round(val, 2, MidpointRounding.AwayFromZero);*/
+                // return val;
+
+                return Producto != null ?
+                    TotalImpuestoN(Impuesto02, Producto.Esquema.AplImpuesto2) : 0;
+            }
+        }
+
+        /// <summary>
+        /// Total de impuesto 3
+        /// </summary>
+        [Appearance("TotalImpuesto03", Context = "DetailView", Enabled = false, FontStyle = FontStyle.Italic)]
+        [VisibleInListView(false)]
+        [NonPersistent]
+        public decimal TotalImpuesto03
+        {
+            get
+            {
+                /*
+                // TI Sep 2017 lo dejé aqui pero según nuestra idea debería ir en Negocio.
+                decimal val = 0;
+                if (Producto != null && Producto.Esquema != null)
+                {
+                    if (Producto.Esquema.AplImpuesto3 == EAplicaImpuesto.Precio)
+                        val = Impuesto03 < 0 ? Importe
+                            * -(decimal)Impuesto03 / 100 : Importe
+                            * (decimal)Impuesto03 / 100;
+                    else if (Producto.Esquema.AplImpuesto3 == EAplicaImpuesto.Acumulado1)
+                        val = Impuesto03 < 0 ? (Importe - TotalDescuentos)
+                            * -(decimal)Impuesto03 / 100 : (Importe - TotalDescuentos)
+                            * (decimal)Impuesto03 / 100;
+                    else if (Producto.Esquema.AplImpuesto3 == EAplicaImpuesto.Acumulado3)
+                        val = Impuesto03 < 0 
+                            ? TotalImpuesto04 * -(decimal)Impuesto03 / 100 
+                            : TotalImpuesto04 * (decimal)Impuesto03 / 100;
+                }
+                return Math.Round(val, 2, MidpointRounding.AwayFromZero); 
+                // return val;
+                */
+                return Producto != null ?
+                    TotalImpuestoN(Impuesto03, Producto.Esquema.AplImpuesto3) : 0;
+            }
+        }
+
         /// <summary>
         /// Total de impuesto IVA
         /// </summary>
@@ -708,95 +832,17 @@ namespace Cap.Ventas.BusinessObjects
                     * (decimal)Impuesto04 / 100;*/
                 // return (Importe - TotalDescuentos) * (decimal)Impuesto04 / 100;
                 // TI Jul 2016, Parece que esto hace una diferencia en los decimales con el Total Garu Cxc
-                return Math.Round((Importe - TotalDescuentos) * (decimal)Impuesto04 / 100, 
-                    2, MidpointRounding.AwayFromZero);
+                /* Dic 2020
+                return Math.Round((Importe - TotalDescuentos) * (decimal)Impuesto04 / 100,
+                    2, MidpointRounding.AwayFromZero);*/
+                return Producto != null ?
+                    TotalImpuestoN(Impuesto04, Producto.Esquema.AplImpuesto4) :
+                    0;
+
             }
         }
 
 
-        private decimal mTotalImpuesto01;
-        /// <summary>
-        /// Total de impuesto 1
-        /// </summary>
-        //[Appearance("TotalImpuesto01", Context = "DetailView", Enabled = false, FontStyle = FontStyle.Italic)]
-        // [DevExpress.Xpo.DisplayName("Total IVA")]
-        [VisibleInListView(false)]
-        //[NonPersistent]
-        public decimal TotalImpuesto01
-        {
-            get
-            {
-                if (mTotalImpuesto01 == 0)
-                {
-                    decimal val = 0;
-                    if (Producto != null && Producto.Esquema != null)
-                    {
-                        if (Producto.Esquema.AplImpuesto1 == EAplicaImpuesto.Precio)
-                            val = Impuesto01 < 0 ? Importe
-                                * -(decimal)Impuesto01 / 100 : Importe
-                                * (decimal)Impuesto01 / 100;
-                    }
-                    return Math.Round(val, 2, MidpointRounding.AwayFromZero);
-                }
-                else
-                    return mTotalImpuesto01;
-            }
-            set
-            {
-                SetPropertyValue("TotalImpuesto01", ref mTotalImpuesto01, value);
-            }
-        }
-
-        /// <summary>
-        /// Total de impuesto 3
-        /// </summary>
-        [Appearance("TotalImpuesto03", Context = "DetailView", Enabled = false, FontStyle = FontStyle.Italic)]
-        [VisibleInListView(false)]
-        [NonPersistent]
-        public decimal TotalImpuesto03
-        {
-            get
-            {
-                // TI Sep 2017 lo dejé aqui pero según nuestra idea debería ir en Negocio.
-                decimal val = 0;
-                if (Producto != null && Producto.Esquema != null)
-                {
-                    if (Producto.Esquema.AplImpuesto3 == EAplicaImpuesto.Precio)
-                        val = Impuesto03 < 0 ? Importe
-                            * -(decimal)Impuesto03 / 100 : Importe
-                            * (decimal)Impuesto03 / 100;
-                    else if (Producto.Esquema.AplImpuesto3 == EAplicaImpuesto.Acumulado3)
-                        val = Impuesto03 < 0 
-                            ? TotalImpuesto04 * -(decimal)Impuesto03 / 100 
-                            : TotalImpuesto04 * (decimal)Impuesto03 / 100;
-                }
-                return Math.Round(val, 2, MidpointRounding.AwayFromZero); 
-                // return val;
-            }
-        }
-
-        /// <summary>
-        /// Total de impuesto 2
-        /// </summary>
-        [Appearance("TotalImpuesto02", Context = "DetailView", Enabled = false, FontStyle = FontStyle.Italic)]
-        [VisibleInListView(false)]
-        [NonPersistent]
-        public decimal TotalImpuesto02
-        {
-            get
-            {
-                decimal val = 0;
-                if (Producto != null && Producto.Esquema != null)
-                {
-                    if (Producto.Esquema.AplImpuesto2 == EAplicaImpuesto.Precio)
-                        val = Impuesto02 < 0 ? Importe
-                            * -(decimal)Impuesto02 / 100 : Importe
-                            * (decimal)Impuesto02 / 100;
-                }
-                return Math.Round(val, 2, MidpointRounding.AwayFromZero); 
-                // return val;
-            }
-        }
 
         private ProductoPrecios mPrdctPrcs;
         [VisibleInDetailView(false)] // TI Mientras veo como ponerlo
