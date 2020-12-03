@@ -7,6 +7,9 @@ namespace Cap.Inventarios.BusinessObjects
     //#region + Aplicar impuestos enums
     public enum EAplicaImpuesto
     {
+        /// <summary>
+        /// Importe - Descuentos
+        /// </summary>
         Precio = 1,
         [XafDisplayName("Acumulado 1")]
         Acumulado1 = 2,
