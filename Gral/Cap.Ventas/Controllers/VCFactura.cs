@@ -39,34 +39,36 @@ namespace Cap.Ventas.Controllers
 
             TargetObjectType = typeof(DocumentoSalida);
 
+            simpleActionMail.TargetObjectType = typeof(DocumentoSalida);
+            simpleActionMail.TargetObjectsCriteria = string.Format("Status == {0}", DocumentoStatus.Sellada.GetHashCode());
+
+            simpleActionVerXML.TargetViewType = ViewType.ListView;
+            simpleActionVerXML.TargetObjectType = typeof(DocumentoSalida);
+            simpleActionVerXML.ImageName = "Document-Properties";
+            simpleActionVerXML.TargetObjectsCriteria = "Status == 'Sellada'";
+            simpleActionVerXML.SelectionDependencyType = SelectionDependencyType.RequireSingleObject;
+
+            simpleActionViewPdf.TargetViewType = ViewType.ListView;
+            simpleActionViewPdf.TargetObjectType = typeof(DocumentoSalida);
+            simpleActionViewPdf.ImageName = "Doc-Acrobat";
+            simpleActionViewPdf.TargetObjectsCriteria = "Status == 'Sellada'";
+            simpleActionViewPdf.SelectionDependencyType = SelectionDependencyType.RequireSingleObject;
+
+            simpleActionSavSellr.TargetViewType = ViewType.DetailView;
             simpleActionSavSellr.Id = "Cap.Ventas.SvSllr";
             simpleActionSavSellr.Caption = "Guardar y Sellar";
             simpleActionSavSellr.Category = "Save";
             simpleActionSavSellr.ConfirmationMessage = "Está seguro de Guardar y Sellar ?";
             simpleActionSavSellr.ActionMeaning = ActionMeaning.Accept;
-
             simpleActionSavSellr.Execute += SimpleActionSavSellr_Execute;
             simpleActionSavSellr.ImageName = "Save_and_Close";
-
             simpleActionSavSellr.TargetObjectType = typeof(DocumentoSalida);
-            simpleActionSavSellr.TargetViewType = ViewType.DetailView;
             simpleActionSavSellr.TargetObjectsCriteria = string.Format("Status == {0}", DocumentoStatus.Alta.GetHashCode());
 
+            simpleActionCanclr.TargetViewType = ViewType.ListView;
+            simpleActionCanclr.TargetObjectsCriteria = string.Format("Status != {0}", DocumentoStatus.Cancelado.GetHashCode());
+            simpleActionCanclr.TargetObjectType = typeof(DocumentoSalida);
 
-            simpleActionViewPdf.TargetObjectType = typeof(DocumentoSalida);
-            simpleActionViewPdf.TargetViewType = ViewType.ListView;
-            simpleActionViewPdf.ImageName = "Doc-Acrobat";
-            simpleActionViewPdf.TargetObjectsCriteria = "Status == 'Sellada'";
-            simpleActionViewPdf.SelectionDependencyType = SelectionDependencyType.RequireSingleObject;
-
-            simpleActionVerXML.TargetObjectType = typeof(DocumentoSalida);
-            simpleActionVerXML.TargetViewType = ViewType.ListView;
-            simpleActionVerXML.ImageName = "Document-Properties";
-            simpleActionVerXML.TargetObjectsCriteria = "Status == 'Sellada'";
-            simpleActionVerXML.SelectionDependencyType = SelectionDependencyType.RequireSingleObject;
-
-            simpleActionMail.TargetObjectType = typeof(DocumentoSalida);
-            simpleActionMail.TargetObjectsCriteria = string.Format("Status == {0}", DocumentoStatus.Sellada.GetHashCode());
 
             simpleActionImprmAcs.TargetObjectType = typeof(DocumentoSalida);
             simpleActionImprmAcs.TargetObjectsCriteria = string.Format("Status == {0}", DocumentoStatus.Cancelado.GetHashCode());
@@ -74,17 +76,14 @@ namespace Cap.Ventas.Controllers
             simpleActionImprmr.TargetObjectType = typeof(DocumentoSalida);
             simpleActionImprmr.SelectionDependencyType = SelectionDependencyType.RequireSingleObject;
 
-            simpleActionCanclr.TargetObjectsCriteria = string.Format("Status != {0}", DocumentoStatus.Cancelado.GetHashCode());
-            simpleActionCanclr.TargetObjectType = typeof(DocumentoSalida);
-            simpleActionCanclr.TargetViewType = ViewType.ListView;
-
             simpleActionCreaPdf.TargetObjectType = typeof(DocumentoSalida);
             simpleActionCreaPdf.SelectionDependencyType = SelectionDependencyType.RequireSingleObject;
 
-            simpleActionMail.TargetObjectsCriteria = string.Format("Status == {0}", DocumentoStatus.Sellada.GetHashCode());
-
             simpleActionCrCxc.TargetObjectType = typeof(DocumentoSalida);
             simpleActionCrCxc.TargetObjectsCriteria = string.Format("Status == 'Sellada'");
+
+            simpleActionCnstrSttsSAT.TargetObjectType = typeof(DocumentoSalida);
+            simpleActionCnstrSttsSAT.TargetViewType = ViewType.ListView;
         }
 
         protected override void OnActivated()
@@ -92,22 +91,10 @@ namespace Cap.Ventas.Controllers
             base.OnActivated();
             // Perform various tasks depending on the target View.
 
-            //*
             if (View is DetailView)
                 View.ObjectSpace.Committing += ObjectSpace_Committing;
 
-            if (View != null && View is DetailView)
-            {
-                DocumentoSalida fac = View.CurrentObject as DocumentoSalida;
 
-                if (View.ObjectSpace != null && View.ObjectSpace.IsNewObject(fac))
-                    NegocioVentas.IniciaDocumento(fac);
-
-                if (fac != null)
-                {
-                    fac.VentaItems.ListChanged += FacturaItems_ListChanged;
-                }
-            }//*/
             bool puede = Empresa != null ? Empresa.ConCfdi : false;
             simpleActionSavSellr.Active.SetItemValue("Visible", puede && Licencia() /* Empresa.ConCfdi*/);
             simpleActionImprmAcs.Active.SetItemValue("Visible", puede /* Empresa.ConCfdi*/);
@@ -149,6 +136,20 @@ namespace Cap.Ventas.Controllers
         {
             base.OnViewControlsCreated();
             // Access and customize the target View control.
+
+            //*
+            if (View != null && View is DetailView)
+            {
+                DocumentoSalida fac = View.CurrentObject as DocumentoSalida;
+
+                if (View.ObjectSpace != null && View.ObjectSpace.IsNewObject(fac))
+                    NegocioVentas.IniciaDocumento(fac);
+
+                if (fac != null)
+                {
+                    fac.VentaItems.ListChanged += FacturaItems_ListChanged;
+                }
+            }//*/
         }
 
         protected override void OnDeactivated()
@@ -200,39 +201,44 @@ namespace Cap.Ventas.Controllers
         {
             if (View != null && View.ObjectSpace != null)
             {
-                View.ObjectSpace.CommitChanges();
-
-                CfgPagos();
-                CfgCertificado();
-
-                Sella();
-                View.ObjectSpace.Committing -= ObjectSpace_Committing;
-                View.ObjectSpace.CommitChanges();
-                View.ObjectSpace.Committing += ObjectSpace_Committing;
-
-                /* Puede mandar una excepcion si no encuentra o
-                 puede crear la ruta. Tal vez si no la encuentra 
-                 debería guardarlo en memoria */
-                CreaPdfImprime(true, true);
-                View.ObjectSpace.Committing -= ObjectSpace_Committing;
-                View.ObjectSpace.CommitChanges();
-                View.ObjectSpace.Committing += ObjectSpace_Committing;
-
-                NegocioVentas.CreaCxc(View.CurrentObject as DocumentoSalida, Prms);
-                View.ObjectSpace.Committing -= ObjectSpace_Committing;
-                View.ObjectSpace.CommitChanges();
-                View.ObjectSpace.Committing += ObjectSpace_Committing;
-
                 DocumentoSalida doc = View.CurrentObject as DocumentoSalida;
-                if (Prms.SendM && doc.EnvioC != EnvioCorreo.Enviado)
+                if (string.IsNullOrEmpty(doc.Sello))
                 {
-                    NegocioVentas.EnviaMailDocTim(doc, View.ObjectSpace, Prms);
+                    View.ObjectSpace.CommitChanges();
+
+                    CfgPagos();
+                    CfgCertificado();
+
+                    Sella();
                     View.ObjectSpace.Committing -= ObjectSpace_Committing;
                     View.ObjectSpace.CommitChanges();
                     View.ObjectSpace.Committing += ObjectSpace_Committing;
-                }
 
-                View.Close();
+                    /* Puede mandar una excepcion si no encuentra o
+                     puede crear la ruta. Tal vez si no la encuentra 
+                     debería guardarlo en memoria */
+                    CreaPdfImprime(true, true);
+                    View.ObjectSpace.Committing -= ObjectSpace_Committing;
+                    View.ObjectSpace.CommitChanges();
+                    View.ObjectSpace.Committing += ObjectSpace_Committing;
+
+                    NegocioVentas.CreaCxc(View.CurrentObject as DocumentoSalida, Prms);
+                    View.ObjectSpace.Committing -= ObjectSpace_Committing;
+                    View.ObjectSpace.CommitChanges();
+                    View.ObjectSpace.Committing += ObjectSpace_Committing;
+
+                    // DocumentoSalida doc = View.CurrentObject as DocumentoSalida;
+                    if (Prms.SendM && doc.EnvioC != EnvioCorreo.Enviado)
+                    {
+                        NegocioVentas.EnviaMailDocTim(doc, View.ObjectSpace, Prms);
+                        View.ObjectSpace.Committing -= ObjectSpace_Committing;
+                        View.ObjectSpace.CommitChanges();
+                        View.ObjectSpace.Committing += ObjectSpace_Committing;
+                    }
+
+                    /*Feb 2021 se enoja, pero tal vez no es necesario
+                    View.Close();*/
+                }
             }
         }
 
