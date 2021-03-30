@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="FCap.Module.BusinessObjects.FacturaElectronica.Certificado" IsDesigned="True" ImageName="Certificate" />
+  </BOModel>
+  <Views>
+    <DetailView Id="Certificado_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="35.2">
+            <LayoutGroup Id="Certificado" RelativeSize="76.818181818181813">
+              <LayoutGroup Id="Certificado_col1" RelativeSize="48.382126348228041">
+                <LayoutItem Id="FileCertif" SizeConstraintsType="Default" RelativeSize="23.529411764705884" ViewItem="FileCertif" />
+                <LayoutItem Id="FilePrivKy" SizeConstraintsType="Default" RelativeSize="17.647058823529413" ViewItem="FilePrivKy" />
+                <LayoutItem Id="PasswCertif" SizeConstraintsType="Default" RelativeSize="17.647058823529413" ViewItem="PasswCertif" />
+                <LayoutItem Id="Contra" SizeConstraintsType="Default" RelativeSize="17.647058823529413" ViewItem="Contra" />
+                <LayoutItem Id="SerieCertif" SizeConstraintsType="Default" RelativeSize="23.529411764705884" ViewItem="SerieCertif" />
+              </LayoutGroup>
+              <LayoutGroup Id="Certificado_col2" RelativeSize="48.228043143297377">
+                <LayoutItem Id="EmisorCertif" SizeConstraintsType="Default" Index="0" RelativeSize="23.529411764705884" ViewItem="EmisorCertif" Removed="True" />
+                <LayoutItem Id="FechaIni" SizeConstraintsType="Default" Index="0" RelativeSize="23.529411764705884" ViewItem="FechaIni" />
+                <LayoutItem Id="FechaFin" SizeConstraintsType="Default" Index="1" RelativeSize="17.647058823529413" ViewItem="FechaFin" />
+                <LayoutItem Id="AvisarCer" SizeConstraintsType="Default" Index="2" RelativeSize="58.8235294117647" ViewItem="AvisarCer" />
+                <LayoutItem Id="EmprCertif" ViewItem="EmprCertif" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="EmprCertif" ViewItem="EmprCertif" SizeConstraintsType="Default" Index="1" RelativeSize="10.909090909090908" IsNewNode="True" />
+            <LayoutItem Id="EmisorCertif" ViewItem="EmisorCertif" SizeConstraintsType="Default" Index="2" RelativeSize="12.272727272727273" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="64.8">
+            <LayoutItem Id="CertificadoCad" SizeConstraintsType="Default" RelativeSize="100" ViewItem="CertificadoCad" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
