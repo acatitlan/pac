@@ -16,6 +16,8 @@ using DevExpress.Xpo;
 using Cap.Generales.BusinessObjects.General;
 using DevExpress.ExpressApp.ConditionalAppearance;
 using DevExpress.Persistent.Validation;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
 
 namespace Cap.Fe.BusinessObjects
 {
@@ -47,11 +49,11 @@ namespace Cap.Fe.BusinessObjects
         }*/
 
         private MyFileData mFileCertif;
-        [ImmediatePostData]
         // TI Sep 2017 Ahora ya no es indispensable, sólo los archivos PEM
         // Pero como hay que crear los archivos PEM, para la gueb no funciona esto.
         // Por eso son necesarios el certificado y la llave
         //
+        [ImmediatePostData]
         [RuleRequiredField("RuleRequiredField for Certificado.FileCertif", DefaultContexts.Save, "Debe asignar el Archivo Certificado", SkipNullOrEmptyValues = false)]
         [XafDisplayName("Archivo Certificado")]
         [FileTypeFilter("Certificados", 1, "*.cer")]
@@ -61,7 +63,8 @@ namespace Cap.Fe.BusinessObjects
             set
             {
                 SetPropertyValue("FileCertif", ref mFileCertif, value);
-                /* TIT, value cuando se asigna no trae el nombre del archivo
+                /* TIT, value cuando se asigna no trae el nombre del archivo 
+                 * No funciona el ImmediatePostData
                 if (!IsLoading)
                 {
                     ValoresCertificado();
@@ -104,7 +107,7 @@ namespace Cap.Fe.BusinessObjects
 
 
         private string mSerieCertif;
-        [DevExpress.Xpo.DisplayName("Serie Certificado")]
+        [XafDisplayName("Serie Certificado")]
         // [Appearance("SerieCertif", Context = "DetailView", Enabled = false, FontStyle = System.Drawing.FontStyle.Italic)]
         [Size(25)]
         public string SerieCertif
@@ -138,7 +141,7 @@ namespace Cap.Fe.BusinessObjects
         }
 
         private DateTime mFechaIni;
-        [DevExpress.Xpo.DisplayName("Fecha Inicial")]
+        [XafDisplayName("Fecha Inicial")]
         // [Appearance("FechaIni", Context = "DetailView", Enabled = false, FontStyle = System.Drawing.FontStyle.Italic)]
         [ModelDefault("DisplayFormat", "{0:dd MMM yyyy}")]
         public DateTime FechaIni
@@ -148,8 +151,9 @@ namespace Cap.Fe.BusinessObjects
         }
 
         private DateTime mFechaFin;
-        [ImmediatePostData]
-        [DevExpress.Xpo.DisplayName("Fecha Final")]
+        // ? si es un dato que trae el certificado Mrz 2021
+        //[ImmediatePostData]
+        [XafDisplayName("Fecha Final")]
         // [Appearance("FechaFin", Context = "DetailView", Enabled = false, FontStyle = System.Drawing.FontStyle.Italic)]
         [ModelDefault("DisplayFormat", "{0:dd MMM yyyy}")]
         public DateTime FechaFin
@@ -229,6 +233,22 @@ namespace Cap.Fe.BusinessObjects
         {
             get { return !string.IsNullOrEmpty(PasswCertif.Trim()); }
         }
+
+        /*
+        void ValoresCertificado()
+        {
+            X509Certificate2 x509 = new X509Certificate2();
+            x509.Import(FileCertif.Content);
+
+            byte[] nSerie = x509.GetSerialNumber();
+            SerieCertif = Encoding.ASCII.GetString(nSerie);
+
+            EmprCertif = x509.SubjectName.Name;
+            EmisorCertif = x509.IssuerName.Name;
+
+            FechaIni = Convert.ToDateTime(x509.GetEffectiveDateString());
+            FechaFin = Convert.ToDateTime(x509.GetExpirationDateString());
+        }*/
     }
 
 
